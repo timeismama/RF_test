@@ -1,0 +1,3 @@
+[console_scripts]
+rfhub = rfhub.__main__:main
+

@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: robotframework-run-keyword-async
+Version: 1.0.8
+Summary: Generic Robot Framework library for asynchronous keyword or method execution
+Home-page: https://github.com/awadhn/robotframework-run-keyword-async
+Author: Awadh Shukla
+Author-email: shukla.awadh@gmail.com
+License: MIT
+Download-URL: https://github.com/awadhn/robotframework-run-keyword-async
+Description: UNKNOWN
+Keywords: run-keyword-async,async,robotframework
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: robotframework-async
+Version: 1.0.3
+Summary: Generic Robot Framework library for asynchronous keyword execution
+Home-page: https://github.com/Chetic/robotframework-async
+Author: Fredrik Reveny
+Author-email: chetic@gmail.com
+License: MIT
+Download-URL: https://github.com/Chetic/robotframework-async
+Description: UNKNOWN
+Keywords: async,robotframework
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

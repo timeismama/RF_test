@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: robotframework-csvlibrary
+Version: 0.0.2
+Summary: CSV library for Robot Framework
+Home-page: https://github.com/s4int/robotframework-CSVLibrary
+Author: Marcin Mierzejewski
+Author-email: <mmierz@gmail.com>
+License: Apache License 2.0
+Description: CSV file support for Robot Framework.
+Keywords: robotframework testing csv
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Testing

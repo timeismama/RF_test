@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: requests-jwt
+Version: 0.4
+Summary: This package allows for HTTP JSON Web Token (JWT) authentication using the requests library.
+Home-page: https://github.com/tgs/requests-jwt
+Author: Thomas Grenfell Smith
+Author-email: thomathom@gmail.com
+License: ISC
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Provides: requests_jwt
