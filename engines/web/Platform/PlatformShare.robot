@@ -13,7 +13,7 @@ Resource        Resources/PO/Platform_TopMenu.robot
 Resource        Resources/Platform_Common.robot
 Resource        Resources/PO/Platform_LoginPage.robot
 Resource        Resources/PO/Platform_OrganizationPage.robot
-
+Resource        Resources/PO/Platform_MeterPage.robot
 
 *** Keywords ***
 Start Platform with default user account
