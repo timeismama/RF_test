@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc4ae98d-8d55-4b50-b356-99c92f54977e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/RF-test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RF-test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/web/Platform/PlatformShare.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/PlatformShare.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_MeterPage.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_MeterPage.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_OrganizationPage.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_OrganizationPage.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_TopMenu.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_TopMenu.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/web/Platform/Resources/Platform_Common.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Resources/Platform_Common.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/web/Platform/Results/junit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Results/junit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/web/Platform/Results/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Results/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/web/Platform/Results/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Results/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/web/Platform/Results/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Results/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/web/Platform/Tests/Customer_Management/Organization_Info.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Tests/Customer_Management/Organization_Info.robot" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,272 +22,17 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1193144254">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="11" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="4" />
-          <entry key="project.open.time.2" value="2" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.78" value="1" />
-          <entry key="project.opened" value="11" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="bat" value="5" />
-          <entry key="html" value="1" />
-          <entry key="py" value="14" />
-          <entry key="robot" value="58" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="HTML" value="1" />
-          <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Python" value="14" />
-          <entry key="Robot Feature" value="58" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="Python Console" value="16" />
-          <entry key="bat" value="39" />
-          <entry key="robot" value="1664" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="PLAIN_TEXT" value="39" />
-          <entry key="Python" value="16" />
-          <entry key="Robot Feature" value="1664" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="982666594">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="log" value="1" />
-          <entry key="py" value="4" />
-          <entry key="robot" value="16" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="4" />
-          <entry key="Robot Feature" value="16" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="robot" value="588" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="Robot Feature" value="588" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/engines/web/Platform/PlatformShare.robot">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/engines/web/Platform/Tests/Device_Management/Meter_Info.robot">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
-              <folding>
-                <element signature="e#0#114#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_MeterPage.robot">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#54#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_TopMenu.robot">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="e#0#53#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/engines/web/Platform/Resources/Platform_Common.robot">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>PATH</find>
-      <find>Call Method</find>
-      <find>Input text</find>
-      <find>close browser</find>
-      <find>Create Webdriver</find>
-      <find>Go to</find>
-      <find>Click element when is enabled</find>
-      <find>add_argument</find>
-      <find>add_to_capabilities</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/engines/web/Platform/PatformShare.robot" />
-        <option value="$PROJECT_DIR$/engines/web/Platform/startTest.bat" />
-        <option value="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_LoginPage.robot" />
-        <option value="$PROJECT_DIR$/engines/web/Platform/Tests/login.robot" />
-        <option value="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_OrganizationPage.robot" />
-        <option value="$PROJECT_DIR$/engines/web/Platform/Tests/Customer_Management/Organization_Info.robot" />
-        <option value="$PROJECT_DIR$/engines/web/WebShare.robot" />
-        <option value="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_TopMenu.robot" />
-        <option value="$PROJECT_DIR$/engines/web/Platform/Resources/Platform_Common.robot" />
-        <option value="$PROJECT_DIR$/engines/web/Platform/PlatformShare.robot" />
-        <option value="$PROJECT_DIR$/engines/web/Platform/Tests/Device_Management/Meter_Info.robot" />
-        <option value="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_MeterPage.robot" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1358" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <autoscrollToSource Scope="false" />
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="RF_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RF_test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RF_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RF_test" type="462c0819:PsiDirectoryNode" />
-              <item name="engines" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RF_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RF_test" type="462c0819:PsiDirectoryNode" />
-              <item name="engines" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RF_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RF_test" type="462c0819:PsiDirectoryNode" />
-              <item name="engines" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="Platform" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RF_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RF_test" type="462c0819:PsiDirectoryNode" />
-              <item name="engines" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RF_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RF_test" type="462c0819:PsiDirectoryNode" />
-              <item name="engines" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="PO" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RF_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RF_test" type="462c0819:PsiDirectoryNode" />
-              <item name="engines" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="Tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RF_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RF_test" type="462c0819:PsiDirectoryNode" />
-              <item name="engines" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="Tests" type="462c0819:PsiDirectoryNode" />
-              <item name="Customer_Management" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RF_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RF_test" type="462c0819:PsiDirectoryNode" />
-              <item name="engines" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="Tests" type="462c0819:PsiDirectoryNode" />
-              <item name="Device_Management" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectId" id="1PMHyv4ZrsW6A2rB5GEaOa0LqTs" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -314,238 +68,17 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" x="523" y="219" width="319" height="290" id="Project" order="0" visible="true" weight="0.18914647" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295082" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.31813246" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.52459013" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" x="523" y="219" width="319" height="290" id="Project" order="0" visible="true" weight="0.18914647" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295082" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.4197397" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.52459013" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/engines/web/Platform/PatformShare.robot" />
-    <entry file="file://$PROJECT_DIR$/pypy2/site-packages/Selenium2Library/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pypy2/site-packages/SeleniumLibrary/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="56" column="27" lean-forward="true" selection-start-line="56" selection-start-column="27" selection-end-line="56" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pypy2/site-packages/robot/libraries/BuiltIn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="1961" column="49" selection-start-line="1961" selection-start-column="49" selection-end-line="1961" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/software/AtuoTest/Python27/Scripts/rst2html5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="54" lean-forward="true" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engines/web/Platform/log.html" />
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons/multiprocessing/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pypy2/site-packages/robot/libraries/OperatingSystem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/software/AtuoTest/Python27/Lib/site-packages/SeleniumLibrary/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pypy2/site-packages/robot/libraries/String.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engines/web/Platform/startTest.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engines/web/Platform/debug.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_LoginPage.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engines/web/Platform/Tests/login.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pypy2/lib-python/2.7/argparse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="1267" lean-forward="true" selection-start-line="1267" selection-end-line="1267" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/HOME/login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-264">
-          <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pypy2/site-packages/SeleniumLibrary/keywords/browsermanagement.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="142" column="8" selection-start-line="142" selection-start-column="8" selection-end-line="142" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pypy2/site-packages/selenium/webdriver/common/proxy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6842">
-          <caret line="311" column="70" selection-start-line="311" selection-start-column="65" selection-end-line="311" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engines/web/WebShare.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="45" lean-forward="true" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_OrganizationPage.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engines/web/Platform/Tests/Customer_Management/Organization_Info.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_TopMenu.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engines/web/Platform/Resources/Platform_Common.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engines/web/Platform/PlatformShare.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engines/web/Platform/Tests/Device_Management/Meter_Info.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#0#114#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_MeterPage.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

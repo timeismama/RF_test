@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.0.2 (PyPy 2.7.13 on win32)" generated="20190809 09:26:49.002">
-<suite id="s1" name="Organization Info" source="E:\project\RF_test\engines\web\Platform\Tests\Customer_Management\Organization_Info.robot">
+<robot generator="Robot 3.0.2 (PyPy 2.7.13 on win32)" generated="20190814 15:55:14.072">
+<suite id="s1" name="Organization Info" source="E:\RobotFramework\RF_test\engines\web\Platform\Tests\Customer_Management\Organization_Info.robot">
 <kw name="Start Platform with default user account" library="PlatformShare" type="setup">
 <doc>Open and maximize browser with selected url</doc>
 <kw name="Evaluate" library="BuiltIn">
@@ -12,8 +12,8 @@
 <assign>
 <var>${chrome options}</var>
 </assign>
-<msg timestamp="20190809 09:26:51.460" level="INFO">${chrome options} = &lt;selenium.webdriver.chrome.options.Options object at 0x04a09430&gt;</msg>
-<status status="PASS" starttime="20190809 09:26:51.459" endtime="20190809 09:26:51.460"></status>
+<msg timestamp="20190814 15:55:15.263" level="INFO">${chrome options} = &lt;selenium.webdriver.chrome.options.Options object at 0x040e9e70&gt;</msg>
+<status status="PASS" starttime="20190814 15:55:15.262" endtime="20190814 15:55:15.263"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -24,8 +24,8 @@
 <assign>
 <var>${chrome noProxy}</var>
 </assign>
-<msg timestamp="20190809 09:26:51.462" level="INFO">${chrome noProxy} = &lt;selenium.webdriver.common.proxy.Proxy object at 0x04a094d0&gt;</msg>
-<status status="PASS" starttime="20190809 09:26:51.460" endtime="20190809 09:26:51.462"></status>
+<msg timestamp="20190814 15:55:15.264" level="INFO">${chrome noProxy} = &lt;selenium.webdriver.common.proxy.Proxy object at 0x040e9e90&gt;</msg>
+<status status="PASS" starttime="20190814 15:55:15.263" endtime="20190814 15:55:15.264"></status>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <doc>Calls the named method of the given object with the provided arguments.</doc>
@@ -34,7 +34,7 @@
 <arg>add_argument</arg>
 <arg>--lang\=en-US</arg>
 </arguments>
-<status status="PASS" starttime="20190809 09:26:51.463" endtime="20190809 09:26:51.466"></status>
+<status status="PASS" starttime="20190814 15:55:15.264" endtime="20190814 15:55:15.266"></status>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <doc>Calls the named method of the given object with the provided arguments.</doc>
@@ -43,7 +43,7 @@
 <arg>add_argument</arg>
 <arg>--disable-single-click-autofill</arg>
 </arguments>
-<status status="PASS" starttime="20190809 09:26:51.466" endtime="20190809 09:26:51.467"></status>
+<status status="PASS" starttime="20190814 15:55:15.266" endtime="20190814 15:55:15.267"></status>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <doc>Calls the named method of the given object with the provided arguments.</doc>
@@ -54,8 +54,8 @@
 <assign>
 <var>${chrome options}</var>
 </assign>
-<msg timestamp="20190809 09:26:51.468" level="INFO">${chrome options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'extensions': [], 'args': [u'--lang=en-US', u'--disable-single-click-autofill']}}</msg>
-<status status="PASS" starttime="20190809 09:26:51.467" endtime="20190809 09:26:51.468"></status>
+<msg timestamp="20190814 15:55:15.268" level="INFO">${chrome options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'extensions': [], 'args': [u'--lang=en-US', u'--disable-single-click-autofill']}}</msg>
+<status status="PASS" starttime="20190814 15:55:15.267" endtime="20190814 15:55:15.269"></status>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <doc>Calls the named method of the given object with the provided arguments.</doc>
@@ -64,7 +64,7 @@
 <arg>add_to_capabilities</arg>
 <arg>${chrome options}</arg>
 </arguments>
-<status status="PASS" starttime="20190809 09:26:51.468" endtime="20190809 09:26:51.469"></status>
+<status status="PASS" starttime="20190814 15:55:15.269" endtime="20190814 15:55:15.269"></status>
 </kw>
 <kw name="Create Webdriver" library="SeleniumLibrary">
 <doc>Creates an instance of Selenium WebDriver.</doc>
@@ -72,24 +72,28 @@
 <arg>Chrome</arg>
 <arg>desired_capabilities=${chrome options}</arg>
 </arguments>
-<msg timestamp="20190809 09:26:51.470" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<status status="PASS" starttime="20190809 09:26:51.469" endtime="20190809 09:27:00.431"></status>
+<msg timestamp="20190814 15:55:15.271" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20190814 15:55:15.271" endtime="20190814 15:55:18.880"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190814 15:55:18.881" endtime="20190814 15:55:20.049"></status>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <doc>Navigates the active browser instance to the provided ``url``.</doc>
 <arguments>
 <arg>${WEB_PLATFORM_URL}</arg>
 </arguments>
-<msg timestamp="20190809 09:27:00.437" level="INFO">Opening url 'http://demo.metering-cloud.com/platform25'</msg>
-<status status="PASS" starttime="20190809 09:27:00.434" endtime="20190809 09:27:06.187"></status>
+<msg timestamp="20190814 15:55:20.051" level="INFO">Opening url 'http://localhost:8181/platform'</msg>
+<status status="PASS" starttime="20190814 15:55:20.050" endtime="20190814 15:55:21.727"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>20s</arg>
+<arg>2s</arg>
 </arguments>
-<msg timestamp="20190809 09:27:26.200" level="INFO">Slept 20 seconds</msg>
-<status status="PASS" starttime="20190809 09:27:06.188" endtime="20190809 09:27:26.204"></status>
+<msg timestamp="20190814 15:55:23.727" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190814 15:55:21.727" endtime="20190814 15:55:23.729"></status>
 </kw>
 <kw name="Log in" library="PlatformShare">
 <doc>login platform by ginven a default account</doc>
@@ -103,10 +107,10 @@
 <arg>${WEB_PLATFORM_LP_USER_INPUTBOX}</arg>
 <arg>${value}</arg>
 </arguments>
-<msg timestamp="20190809 09:27:26.218" level="INFO">Typing text 'admin' into text field 'id:account'.</msg>
-<status status="PASS" starttime="20190809 09:27:26.215" endtime="20190809 09:27:26.337"></status>
+<msg timestamp="20190814 15:55:23.747" level="INFO">Typing text 'admin' into text field 'id:account'.</msg>
+<status status="PASS" starttime="20190814 15:55:23.741" endtime="20190814 15:55:23.999"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:27:26.212" endtime="20190809 09:27:26.337"></status>
+<status status="PASS" starttime="20190814 15:55:23.735" endtime="20190814 15:55:23.999"></status>
 </kw>
 <kw name="Insert Password" library="Platform_LoginPage">
 <arguments>
@@ -118,10 +122,10 @@
 <arg>${WEB_PLATFORM_LP_PASSWORD_INPUTBOX}</arg>
 <arg>${value}</arg>
 </arguments>
-<msg timestamp="20190809 09:27:26.339" level="INFO">Typing password into text field 'id:password'.</msg>
-<status status="PASS" starttime="20190809 09:27:26.338" endtime="20190809 09:27:26.444"></status>
+<msg timestamp="20190814 15:55:24.001" level="INFO">Typing password into text field 'id:password'.</msg>
+<status status="PASS" starttime="20190814 15:55:24.000" endtime="20190814 15:55:24.248"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:27:26.338" endtime="20190809 09:27:26.446"></status>
+<status status="PASS" starttime="20190814 15:55:23.999" endtime="20190814 15:55:24.248"></status>
 </kw>
 <kw name="Click login button" library="Platform_LoginPage">
 <kw name="Click element when is enabled" library="WebShare">
@@ -141,9 +145,9 @@
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<status status="PASS" starttime="20190809 09:27:26.450" endtime="20190809 09:27:26.480"></status>
+<status status="PASS" starttime="20190814 15:55:24.250" endtime="20190814 15:55:24.326"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:27:26.449" endtime="20190809 09:27:26.480"></status>
+<status status="PASS" starttime="20190814 15:55:24.250" endtime="20190814 15:55:24.326"></status>
 </kw>
 <kw name="Wait Until Keyword Succeeds" library="BuiltIn">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -158,9 +162,9 @@
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<status status="PASS" starttime="20190809 09:27:26.481" endtime="20190809 09:27:26.501"></status>
+<status status="PASS" starttime="20190814 15:55:24.328" endtime="20190814 15:55:24.388"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:27:26.480" endtime="20190809 09:27:26.501"></status>
+<status status="PASS" starttime="20190814 15:55:24.327" endtime="20190814 15:55:24.388"></status>
 </kw>
 <kw name="Wait Until Keyword Succeeds" library="BuiltIn">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -175,31 +179,31 @@
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20190809 09:27:26.503" level="INFO">Clicking element 'id:login'.</msg>
-<status status="PASS" starttime="20190809 09:27:26.503" endtime="20190809 09:27:26.570"></status>
+<msg timestamp="20190814 15:55:24.390" level="INFO">Clicking element 'id:login'.</msg>
+<status status="PASS" starttime="20190814 15:55:24.390" endtime="20190814 15:55:24.537"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:27:26.502" endtime="20190809 09:27:26.570"></status>
+<status status="PASS" starttime="20190814 15:55:24.389" endtime="20190814 15:55:24.540"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:27:26.448" endtime="20190809 09:27:26.571"></status>
+<status status="PASS" starttime="20190814 15:55:24.249" endtime="20190814 15:55:24.540"></status>
 </kw>
 <kw name="wait for loading page" library="Platform_Common">
 <doc>Wait for dissapearing all loading page icons</doc>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>200ms</arg>
+<arg>20ms</arg>
 <arg>reason=wait for load loading indicator</arg>
 </arguments>
-<msg timestamp="20190809 09:27:26.774" level="INFO">Slept 200 milliseconds</msg>
-<msg timestamp="20190809 09:27:26.775" level="INFO">wait for load loading indicator</msg>
-<status status="PASS" starttime="20190809 09:27:26.573" endtime="20190809 09:27:26.775"></status>
+<msg timestamp="20190814 15:55:24.562" level="INFO">Slept 20 milliseconds</msg>
+<msg timestamp="20190814 15:55:24.563" level="INFO">wait for load loading indicator</msg>
+<status status="PASS" starttime="20190814 15:55:24.542" endtime="20190814 15:55:24.563"></status>
 </kw>
 <kw name="Run Keyword And Ignore Error" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
 <arguments>
 <arg>Wait Until Keyword Succeeds</arg>
 <arg>${WEB_PLATFORM_SELENIUM_TIMEOUT}</arg>
-<arg>200 ms</arg>
+<arg>20 ms</arg>
 <arg>Page Should Not Contain element</arg>
 <arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
 <arg>loglevel=NONE</arg>
@@ -208,7 +212,7 @@
 <doc>Runs the specified keyword and retries if it fails.</doc>
 <arguments>
 <arg>${WEB_PLATFORM_SELENIUM_TIMEOUT}</arg>
-<arg>200 ms</arg>
+<arg>20 ms</arg>
 <arg>Page Should Not Contain element</arg>
 <arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
 <arg>loglevel=NONE</arg>
@@ -219,14 +223,14 @@
 <arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
 <arg>loglevel=NONE</arg>
 </arguments>
-<msg timestamp="20190809 09:27:51.220" level="INFO">Current page does not contain element '//img[@id="organizationLoader"]'.</msg>
-<status status="PASS" starttime="20190809 09:27:26.786" endtime="20190809 09:27:51.223"></status>
+<msg timestamp="20190814 15:55:24.615" level="INFO">Current page does not contain element '//img[@id="organizationLoader"]'.</msg>
+<status status="PASS" starttime="20190814 15:55:24.566" endtime="20190814 15:55:24.615"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:27:26.785" endtime="20190809 09:27:51.223"></status>
+<status status="PASS" starttime="20190814 15:55:24.565" endtime="20190814 15:55:24.616"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:27:26.783" endtime="20190809 09:27:51.223"></status>
+<status status="PASS" starttime="20190814 15:55:24.564" endtime="20190814 15:55:24.616"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:27:26.572" endtime="20190809 09:27:51.224"></status>
+<status status="PASS" starttime="20190814 15:55:24.541" endtime="20190814 15:55:24.616"></status>
 </kw>
 <kw name="Wait Until Keyword Succeeds" library="BuiltIn">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -241,26 +245,34 @@
 <arguments>
 <arg>${WEB_PLATFORM_LP_LOG_IN_BUTTON}</arg>
 </arguments>
-<msg timestamp="20190809 09:27:51.240" level="INFO">Current page does not contain element 'id:login'.</msg>
-<status status="PASS" starttime="20190809 09:27:51.226" endtime="20190809 09:27:51.240"></status>
+<msg timestamp="20190814 15:55:24.677" level="FAIL">Page should not have contained element 'id:login'.</msg>
+<status status="FAIL" starttime="20190814 15:55:24.617" endtime="20190814 15:55:24.678"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:27:51.224" endtime="20190809 09:27:51.240"></status>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LP_LOG_IN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20190814 15:55:32.105" level="INFO">Current page does not contain element 'id:login'.</msg>
+<status status="PASS" starttime="20190814 15:55:25.680" endtime="20190814 15:55:32.106"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:27:26.446" endtime="20190809 09:27:51.240"></status>
+<status status="PASS" starttime="20190814 15:55:24.617" endtime="20190814 15:55:32.106"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:27:26.206" endtime="20190809 09:27:51.243"></status>
+<status status="PASS" starttime="20190814 15:55:24.248" endtime="20190814 15:55:32.106"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:26:51.458" endtime="20190809 09:27:51.244"></status>
+<status status="PASS" starttime="20190814 15:55:23.730" endtime="20190814 15:55:32.107"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:15.261" endtime="20190814 15:55:32.107"></status>
 </kw>
 <test id="s1-t1" name="IP-xxx : Add organization">
 <kw name="Given User is in organization info page">
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>20s</arg>
+<arg>2s</arg>
 </arguments>
-<msg timestamp="20190809 09:28:11.250" level="INFO">Slept 20 seconds</msg>
-<status status="PASS" starttime="20190809 09:27:51.248" endtime="20190809 09:28:11.251"></status>
+<msg timestamp="20190814 15:55:34.113" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190814 15:55:32.112" endtime="20190814 15:55:34.115"></status>
 </kw>
 <kw name="Get into organization page" library="Platform_TopMenu">
 <kw name="Click or use url" library="Platform_TopMenu">
@@ -272,14 +284,14 @@
 <arguments>
 <arg>${WEB_PLATFORM_URL}/index.html#/${url_end}</arg>
 </arguments>
-<msg timestamp="20190809 09:28:11.265" level="INFO">Opening url 'http://demo.metering-cloud.com/platform25/index.html#/organization'</msg>
-<status status="PASS" starttime="20190809 09:28:11.256" endtime="20190809 09:28:11.303"></status>
+<msg timestamp="20190814 15:55:34.137" level="INFO">Opening url 'http://localhost:8181/platform/index.html#/organization'</msg>
+<status status="PASS" starttime="20190814 15:55:34.134" endtime="20190814 15:55:34.210"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:28:11.255" endtime="20190809 09:28:11.304"></status>
+<status status="PASS" starttime="20190814 15:55:34.124" endtime="20190814 15:55:34.210"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:28:11.253" endtime="20190809 09:28:11.304"></status>
+<status status="PASS" starttime="20190814 15:55:34.118" endtime="20190814 15:55:34.211"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:27:51.247" endtime="20190809 09:28:11.304"></status>
+<status status="PASS" starttime="20190814 15:55:32.111" endtime="20190814 15:55:34.212"></status>
 </kw>
 <kw name="Then add organization">
 <kw name="wait for loading page" library="Platform_Common">
@@ -287,19 +299,19 @@
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>200ms</arg>
+<arg>20ms</arg>
 <arg>reason=wait for load loading indicator</arg>
 </arguments>
-<msg timestamp="20190809 09:28:11.510" level="INFO">Slept 200 milliseconds</msg>
-<msg timestamp="20190809 09:28:11.511" level="INFO">wait for load loading indicator</msg>
-<status status="PASS" starttime="20190809 09:28:11.308" endtime="20190809 09:28:11.513"></status>
+<msg timestamp="20190814 15:55:34.244" level="INFO">Slept 20 milliseconds</msg>
+<msg timestamp="20190814 15:55:34.244" level="INFO">wait for load loading indicator</msg>
+<status status="PASS" starttime="20190814 15:55:34.222" endtime="20190814 15:55:34.245"></status>
 </kw>
 <kw name="Run Keyword And Ignore Error" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
 <arguments>
 <arg>Wait Until Keyword Succeeds</arg>
 <arg>${WEB_PLATFORM_SELENIUM_TIMEOUT}</arg>
-<arg>200 ms</arg>
+<arg>20 ms</arg>
 <arg>Page Should Not Contain element</arg>
 <arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
 <arg>loglevel=NONE</arg>
@@ -308,7 +320,7 @@
 <doc>Runs the specified keyword and retries if it fails.</doc>
 <arguments>
 <arg>${WEB_PLATFORM_SELENIUM_TIMEOUT}</arg>
-<arg>200 ms</arg>
+<arg>20 ms</arg>
 <arg>Page Should Not Contain element</arg>
 <arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
 <arg>loglevel=NONE</arg>
@@ -319,14 +331,69 @@
 <arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
 <arg>loglevel=NONE</arg>
 </arguments>
-<msg timestamp="20190809 09:28:11.548" level="INFO">Current page does not contain element '//img[@id="organizationLoader"]'.</msg>
-<status status="PASS" starttime="20190809 09:28:11.525" endtime="20190809 09:28:11.548"></status>
+<msg timestamp="20190814 15:55:35.189" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:55:34.251" endtime="20190814 15:55:35.190"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:28:11.520" endtime="20190809 09:28:11.549"></status>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190814 15:55:35.633" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:55:35.210" endtime="20190814 15:55:35.633"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:28:11.516" endtime="20190809 09:28:11.549"></status>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190814 15:55:36.007" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:55:35.654" endtime="20190814 15:55:36.007"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:28:11.307" endtime="20190809 09:28:11.549"></status>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190814 15:55:36.397" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:55:36.027" endtime="20190814 15:55:36.398"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190814 15:55:36.702" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:55:36.418" endtime="20190814 15:55:36.703"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190814 15:55:37.082" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:55:36.723" endtime="20190814 15:55:37.082"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190814 15:55:37.494" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:55:37.102" endtime="20190814 15:55:37.494"></status>
+</kw>
+<msg timestamp="20190814 15:55:37.495" level="FAIL">Keyword 'Page Should Not Contain element' failed after retrying for 3 seconds. The last error was: Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:55:34.249" endtime="20190814 15:55:37.495"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:34.247" endtime="20190814 15:55:37.495"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:34.221" endtime="20190814 15:55:37.495"></status>
 </kw>
 <kw name="Click bottom button add" library="Platform_OrganizationPage">
 <kw name="Get bottom button" library="Platform_OrganizationPage">
@@ -336,8 +403,8 @@
 <assign>
 <var>${add_button_ele}</var>
 </assign>
-<msg timestamp="20190809 09:28:11.552" level="INFO">${add_button_ele} = //td[@id="organizationPager_left"]/table/tbody/tr/td[@title="添加"]</msg>
-<status status="PASS" starttime="20190809 09:28:11.551" endtime="20190809 09:28:11.552"></status>
+<msg timestamp="20190814 15:55:37.497" level="INFO">${add_button_ele} = //td[@id="organizationPager_left"]/table/tbody/tr/td[@title="添加"]</msg>
+<status status="PASS" starttime="20190814 15:55:37.496" endtime="20190814 15:55:37.498"></status>
 </kw>
 <kw name="Click element when is enabled" library="WebShare">
 <arguments>
@@ -356,57 +423,9 @@
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20190809 09:28:11.621" level="FAIL">UnicodeEncodeError: 'ascii' codec can't encode characters in position 83-84: ordinal not in range(128)</msg>
-<status status="FAIL" starttime="20190809 09:28:11.555" endtime="20190809 09:28:11.621"></status>
+<status status="PASS" starttime="20190814 15:55:37.500" endtime="20190814 15:55:37.585"></status>
 </kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<doc>Waits until element ``locator`` is enabled.</doc>
-<arguments>
-<arg>${locator}</arg>
-</arguments>
-<msg timestamp="20190809 09:28:11.743" level="FAIL">UnicodeEncodeError: 'ascii' codec can't encode characters in position 83-84: ordinal not in range(128)</msg>
-<status status="FAIL" starttime="20190809 09:28:11.729" endtime="20190809 09:28:11.744"></status>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<doc>Waits until element ``locator`` is enabled.</doc>
-<arguments>
-<arg>${locator}</arg>
-</arguments>
-<msg timestamp="20190809 09:28:11.933" level="FAIL">UnicodeEncodeError: 'ascii' codec can't encode characters in position 83-84: ordinal not in range(128)</msg>
-<status status="FAIL" starttime="20190809 09:28:11.848" endtime="20190809 09:28:11.934"></status>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<doc>Waits until element ``locator`` is enabled.</doc>
-<arguments>
-<arg>${locator}</arg>
-</arguments>
-<msg timestamp="20190809 09:28:12.046" level="FAIL">UnicodeEncodeError: 'ascii' codec can't encode characters in position 83-84: ordinal not in range(128)</msg>
-<status status="FAIL" starttime="20190809 09:28:12.034" endtime="20190809 09:28:12.047"></status>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<doc>Waits until element ``locator`` is enabled.</doc>
-<arguments>
-<arg>${locator}</arg>
-</arguments>
-<msg timestamp="20190809 09:28:12.207" level="FAIL">UnicodeEncodeError: 'ascii' codec can't encode characters in position 83-84: ordinal not in range(128)</msg>
-<status status="FAIL" starttime="20190809 09:28:12.147" endtime="20190809 09:28:12.207"></status>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<doc>Waits until element ``locator`` is enabled.</doc>
-<arguments>
-<arg>${locator}</arg>
-</arguments>
-<msg timestamp="20190809 09:28:12.558" level="FAIL">UnicodeEncodeError: 'ascii' codec can't encode characters in position 83-84: ordinal not in range(128)</msg>
-<status status="FAIL" starttime="20190809 09:28:12.307" endtime="20190809 09:28:12.559"></status>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<doc>Waits until element ``locator`` is enabled.</doc>
-<arguments>
-<arg>${locator}</arg>
-</arguments>
-<status status="PASS" starttime="20190809 09:28:12.660" endtime="20190809 09:28:12.799"></status>
-</kw>
-<status status="PASS" starttime="20190809 09:28:11.554" endtime="20190809 09:28:12.800"></status>
+<status status="PASS" starttime="20190814 15:55:37.499" endtime="20190814 15:55:37.585"></status>
 </kw>
 <kw name="Wait Until Keyword Succeeds" library="BuiltIn">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -421,9 +440,9 @@
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<status status="PASS" starttime="20190809 09:28:12.806" endtime="20190809 09:28:12.916"></status>
+<status status="PASS" starttime="20190814 15:55:37.587" endtime="20190814 15:55:37.655"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:28:12.800" endtime="20190809 09:28:12.916"></status>
+<status status="PASS" starttime="20190814 15:55:37.586" endtime="20190814 15:55:37.655"></status>
 </kw>
 <kw name="Wait Until Keyword Succeeds" library="BuiltIn">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -438,20 +457,1288 @@
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20190809 09:28:12.918" level="INFO">Clicking element '//td[@id="organizationPager_left"]/table/tbody/tr/td[@title="添加"]'.</msg>
-<status status="PASS" starttime="20190809 09:28:12.918" endtime="20190809 09:28:13.250"></status>
+<msg timestamp="20190814 15:55:37.657" level="INFO">Clicking element '//td[@id="organizationPager_left"]/table/tbody/tr/td[@title="添加"]'.</msg>
+<status status="PASS" starttime="20190814 15:55:37.657" endtime="20190814 15:55:37.851"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:28:12.917" endtime="20190809 09:28:13.250"></status>
+<status status="PASS" starttime="20190814 15:55:37.656" endtime="20190814 15:55:37.851"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:28:11.553" endtime="20190809 09:28:13.250"></status>
+<status status="PASS" starttime="20190814 15:55:37.498" endtime="20190814 15:55:37.852"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:28:11.550" endtime="20190809 09:28:13.251"></status>
+<status status="PASS" starttime="20190814 15:55:37.496" endtime="20190814 15:55:37.853"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:28:11.306" endtime="20190809 09:28:13.251"></status>
+<kw name="Set org_name" library="Platform_OrganizationPage">
+<arguments>
+<arg>zdh测试</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_ORG_NAME}</arg>
+<arg>${org_name}</arg>
+</arguments>
+<msg timestamp="20190814 15:55:37.857" level="INFO">Typing text 'zdh测试' into text field 'id:orgName'.</msg>
+<status status="PASS" starttime="20190814 15:55:37.856" endtime="20190814 15:55:38.231"></status>
 </kw>
-<status status="PASS" starttime="20190809 09:27:51.244" endtime="20190809 09:28:13.252" critical="yes"></status>
+<status status="PASS" starttime="20190814 15:55:37.854" endtime="20190814 15:55:38.231"></status>
+</kw>
+<kw name="Set org_ramark" library="Platform_OrganizationPage">
+<arguments>
+<arg>1352624</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_ORG_ramark}</arg>
+<arg>${org_ramark}</arg>
+</arguments>
+<msg timestamp="20190814 15:55:38.233" level="INFO">Typing text '1352624' into text field 'class:inputremark'.</msg>
+<status status="PASS" starttime="20190814 15:55:38.233" endtime="20190814 15:55:38.555"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:38.232" endtime="20190814 15:55:38.555"></status>
+</kw>
+<kw name="click element button neat" library="Platform_OrganizationPage">
+<kw name="Click element when is enabled" library="WebShare">
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_NEATBUTTON}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>12</arg>
+<arg>100ms</arg>
+<arg>Wait until element is enabled</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20190814 15:55:38.561" endtime="20190814 15:55:38.653"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:38.559" endtime="20190814 15:55:38.653"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>12</arg>
+<arg>100ms</arg>
+<arg>Wait until element is visible</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20190814 15:55:38.654" endtime="20190814 15:55:38.732"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:38.653" endtime="20190814 15:55:38.733"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>20</arg>
+<arg>300ms</arg>
+<arg>click element</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20190814 15:55:38.736" level="INFO">Clicking element 'id:button_next_step'.</msg>
+<status status="PASS" starttime="20190814 15:55:38.735" endtime="20190814 15:55:38.959"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:38.733" endtime="20190814 15:55:38.960"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:38.556" endtime="20190814 15:55:38.960"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20190814 15:55:40.961" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190814 15:55:38.960" endtime="20190814 15:55:40.963"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:38.555" endtime="20190814 15:55:40.965"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20190814 15:55:42.970" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190814 15:55:40.967" endtime="20190814 15:55:42.972"></status>
+</kw>
+<kw name="Set cus_info" library="Platform_OrganizationPage">
+<kw name="Set cus_num" library="Platform_OrganizationPage">
+<arguments>
+<arg>zdh002</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_NUMBER}</arg>
+<arg>${cusNum}</arg>
+</arguments>
+<msg timestamp="20190814 15:55:42.985" level="INFO">Typing text 'zdh002' into text field 'id:cusNum'.</msg>
+<status status="PASS" starttime="20190814 15:55:42.981" endtime="20190814 15:55:43.383"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:42.977" endtime="20190814 15:55:43.383"></status>
+</kw>
+<kw name="Set cus_name" library="Platform_OrganizationPage">
+<arguments>
+<arg>001客户</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_NAME}</arg>
+<arg>${cusName}</arg>
+</arguments>
+<msg timestamp="20190814 15:55:43.385" level="INFO">Typing text '001客户' into text field 'id:cusName'.</msg>
+<status status="PASS" starttime="20190814 15:55:43.384" endtime="20190814 15:55:43.702"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:43.383" endtime="20190814 15:55:43.702"></status>
+</kw>
+<kw name="Set cus_cuNature" library="Platform_OrganizationPage">
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_CUNATURE}</arg>
+<arg>${cuNature}</arg>
+</arguments>
+<msg timestamp="20190814 15:55:43.704" level="INFO">Selecting options from selection list 'id:cuNature' by index 1.</msg>
+<status status="PASS" starttime="20190814 15:55:43.703" endtime="20190814 15:55:44.006"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:43.703" endtime="20190814 15:55:44.006"></status>
+</kw>
+<kw name="Set cus_serviceStatus" library="Platform_OrganizationPage">
+<arguments>
+<arg>2</arg>
+</arguments>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_SERVICESTATUS}</arg>
+<arg>${serviceStatus}</arg>
+</arguments>
+<msg timestamp="20190814 15:55:44.008" level="INFO">Selecting options from selection list 'id:serviceStatus' by index 2.</msg>
+<status status="PASS" starttime="20190814 15:55:44.007" endtime="20190814 15:55:44.339"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:44.006" endtime="20190814 15:55:44.339"></status>
+</kw>
+<kw name="Set cus_correctionFactor" library="Platform_OrganizationPage">
+<arguments>
+<arg>4</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_CORRECTIONFACTOR}</arg>
+<arg>${correctionFactor}</arg>
+</arguments>
+<msg timestamp="20190814 15:55:44.341" level="INFO">Typing text '4' into text field 'id:correctionFactor'.</msg>
+<status status="PASS" starttime="20190814 15:55:44.341" endtime="20190814 15:55:44.568"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:44.339" endtime="20190814 15:55:44.569"></status>
+</kw>
+<kw name="Set cus_floorSpace" library="Platform_OrganizationPage">
+<arguments>
+<arg>356</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_FLOORSPACE}</arg>
+<arg>${floorSpace}</arg>
+</arguments>
+<msg timestamp="20190814 15:55:44.570" level="INFO">Typing text '356' into text field 'id:floorSpace'.</msg>
+<status status="PASS" starttime="20190814 15:55:44.570" endtime="20190814 15:55:44.845"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:44.569" endtime="20190814 15:55:44.846"></status>
+</kw>
+<kw name="Set cus_serviceFloorArea" library="Platform_OrganizationPage">
+<arguments>
+<arg>200</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_SERVICEFLOORAREA}</arg>
+<arg>${serviceFloorArea}</arg>
+</arguments>
+<msg timestamp="20190814 15:55:44.847" level="INFO">Typing text '200' into text field 'id:serviceFloorArea'.</msg>
+<status status="PASS" starttime="20190814 15:55:44.847" endtime="20190814 15:55:45.123"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:44.846" endtime="20190814 15:55:45.125"></status>
+</kw>
+<kw name="Set cus_population" library="Platform_OrganizationPage">
+<arguments>
+<arg>5</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_POPULATION}</arg>
+<arg>${population}</arg>
+</arguments>
+<msg timestamp="20190814 15:55:45.127" level="INFO">Typing text '5' into text field 'id:population'.</msg>
+<status status="PASS" starttime="20190814 15:55:45.126" endtime="20190814 15:55:45.334"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:45.125" endtime="20190814 15:55:45.334"></status>
+</kw>
+<kw name="Set cus_tel" library="Platform_OrganizationPage">
+<arguments>
+<arg>15245125625</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_TEL}</arg>
+<arg>${tel}</arg>
+</arguments>
+<msg timestamp="20190814 15:55:45.335" level="INFO">Typing text '15245125625' into text field 'id:tel'.</msg>
+<status status="PASS" starttime="20190814 15:55:45.335" endtime="20190814 15:55:45.857"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:45.334" endtime="20190814 15:55:45.857"></status>
+</kw>
+<kw name="Set cus_email" library="Platform_OrganizationPage">
+<arguments>
+<arg>15241@163.com</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_EMAIL}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20190814 15:55:45.859" level="INFO">Typing text '15241@163.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20190814 15:55:45.859" endtime="20190814 15:55:46.426"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:45.858" endtime="20190814 15:55:46.426"></status>
+</kw>
+<kw name="Set cus_remark" library="Platform_OrganizationPage">
+<arguments>
+<arg>自动化测试test</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_REMARK}</arg>
+<arg>${remark}</arg>
+</arguments>
+<msg timestamp="20190814 15:55:46.430" level="INFO">Typing text '自动化测试test' into text field 'id:remark'.</msg>
+<status status="PASS" starttime="20190814 15:55:46.429" endtime="20190814 15:55:46.886"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:46.426" endtime="20190814 15:55:46.886"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:42.974" endtime="20190814 15:55:46.887"></status>
+</kw>
+<kw name="Click button orgComplete" library="Platform_OrganizationPage">
+<kw name="Click element when is enabled" library="WebShare">
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_ORGCOMPLETE}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>12</arg>
+<arg>100ms</arg>
+<arg>Wait until element is enabled</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20190814 15:55:46.889" endtime="20190814 15:55:46.967"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:46.889" endtime="20190814 15:55:46.968"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>12</arg>
+<arg>100ms</arg>
+<arg>Wait until element is visible</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20190814 15:55:46.969" endtime="20190814 15:55:47.045"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:46.968" endtime="20190814 15:55:47.045"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>20</arg>
+<arg>300ms</arg>
+<arg>click element</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20190814 15:55:47.049" level="INFO">Clicking element 'id:button_accomplish'.</msg>
+<status status="PASS" starttime="20190814 15:55:47.047" endtime="20190814 15:55:47.283"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:47.046" endtime="20190814 15:55:47.283"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:46.888" endtime="20190814 15:55:47.283"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190814 15:55:52.287" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190814 15:55:47.286" endtime="20190814 15:55:52.289"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:46.887" endtime="20190814 15:55:52.290"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:34.219" endtime="20190814 15:55:52.292"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20190814 15:55:55.299" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20190814 15:55:52.296" endtime="20190814 15:55:55.300"></status>
+</kw>
+<kw name="Then edit organization">
+<kw name="wait for loading page" library="Platform_Common">
+<doc>Wait for dissapearing all loading page icons</doc>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>20ms</arg>
+<arg>reason=wait for load loading indicator</arg>
+</arguments>
+<msg timestamp="20190814 15:55:55.338" level="INFO">Slept 20 milliseconds</msg>
+<msg timestamp="20190814 15:55:55.341" level="INFO">wait for load loading indicator</msg>
+<status status="PASS" starttime="20190814 15:55:55.310" endtime="20190814 15:55:55.342"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>${WEB_PLATFORM_SELENIUM_TIMEOUT}</arg>
+<arg>20 ms</arg>
+<arg>Page Should Not Contain element</arg>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_SELENIUM_TIMEOUT}</arg>
+<arg>20 ms</arg>
+<arg>Page Should Not Contain element</arg>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190814 15:55:55.790" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:55:55.356" endtime="20190814 15:55:55.791"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190814 15:55:56.173" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:55:55.811" endtime="20190814 15:55:56.174"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190814 15:55:56.547" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:55:56.194" endtime="20190814 15:55:56.548"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190814 15:55:56.925" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:55:56.568" endtime="20190814 15:55:56.926"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190814 15:55:57.328" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:55:56.946" endtime="20190814 15:55:57.328"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190814 15:55:57.709" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:55:57.348" endtime="20190814 15:55:57.710"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190814 15:55:58.154" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:55:57.730" endtime="20190814 15:55:58.154"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190814 15:55:58.522" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:55:58.175" endtime="20190814 15:55:58.522"></status>
+</kw>
+<msg timestamp="20190814 15:55:58.523" level="FAIL">Keyword 'Page Should Not Contain element' failed after retrying for 3 seconds. The last error was: Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:55:55.349" endtime="20190814 15:55:58.523"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:55.345" endtime="20190814 15:55:58.523"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:55.306" endtime="20190814 15:55:58.523"></status>
+</kw>
+<kw name="Select list edit_org_info" library="Platform_OrganizationPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[contains(@id,"jqg_organizationGrid_0")]</arg>
+</arguments>
+<msg timestamp="20190814 15:55:58.525" level="INFO">Clicking element '//input[contains(@id,"jqg_organizationGrid_0")]'.</msg>
+<status status="PASS" starttime="20190814 15:55:58.524" endtime="20190814 15:55:58.706"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20190814 15:56:00.707" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190814 15:55:58.707" endtime="20190814 15:56:00.708"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:58.524" endtime="20190814 15:56:00.709"></status>
+</kw>
+<kw name="Click bottom button edit" library="Platform_OrganizationPage">
+<kw name="Get bottom button" library="Platform_OrganizationPage">
+<arguments>
+<arg>编辑</arg>
+</arguments>
+<assign>
+<var>${add_button_ele}</var>
+</assign>
+<msg timestamp="20190814 15:56:00.718" level="INFO">${add_button_ele} = //td[@id="organizationPager_left"]/table/tbody/tr/td[@title="编辑"]</msg>
+<status status="PASS" starttime="20190814 15:56:00.713" endtime="20190814 15:56:00.719"></status>
+</kw>
+<kw name="Click element when is enabled" library="WebShare">
+<arguments>
+<arg>${add_button_ele}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>12</arg>
+<arg>100ms</arg>
+<arg>Wait until element is enabled</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20190814 15:56:00.726" endtime="20190814 15:56:00.844"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:00.725" endtime="20190814 15:56:00.844"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>12</arg>
+<arg>100ms</arg>
+<arg>Wait until element is visible</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20190814 15:56:00.846" endtime="20190814 15:56:00.913"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:00.845" endtime="20190814 15:56:00.913"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>20</arg>
+<arg>300ms</arg>
+<arg>click element</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20190814 15:56:00.914" level="INFO">Clicking element '//td[@id="organizationPager_left"]/table/tbody/tr/td[@title="编辑"]'.</msg>
+<status status="PASS" starttime="20190814 15:56:00.914" endtime="20190814 15:56:01.068"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:00.913" endtime="20190814 15:56:01.068"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:00.720" endtime="20190814 15:56:01.069"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:00.711" endtime="20190814 15:56:01.069"></status>
+</kw>
+<kw name="Click button_confirm" library="Platform_OrganizationPage">
+<kw name="Click element when is enabled" library="WebShare">
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_CONFIRMbUTTON}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>12</arg>
+<arg>100ms</arg>
+<arg>Wait until element is enabled</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20190814 15:56:01.075" endtime="20190814 15:56:01.210"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:01.072" endtime="20190814 15:56:01.210"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>12</arg>
+<arg>100ms</arg>
+<arg>Wait until element is visible</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20190814 15:56:01.212" endtime="20190814 15:56:01.300"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:01.211" endtime="20190814 15:56:01.301"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>20</arg>
+<arg>300ms</arg>
+<arg>click element</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20190814 15:56:01.302" level="INFO">Clicking element 'id:confirm_button_confirm'.</msg>
+<status status="PASS" starttime="20190814 15:56:01.302" endtime="20190814 15:56:01.537"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:01.301" endtime="20190814 15:56:01.547"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:01.071" endtime="20190814 15:56:01.548"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:01.070" endtime="20190814 15:56:01.548"></status>
+</kw>
+<kw name="Set org_name" library="Platform_OrganizationPage">
+<arguments>
+<arg>zdh测试修改</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_ORG_NAME}</arg>
+<arg>${org_name}</arg>
+</arguments>
+<msg timestamp="20190814 15:56:01.553" level="INFO">Typing text 'zdh测试修改' into text field 'id:orgName'.</msg>
+<status status="PASS" starttime="20190814 15:56:01.551" endtime="20190814 15:56:02.104"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:01.549" endtime="20190814 15:56:02.105"></status>
+</kw>
+<kw name="Set org_ramark" library="Platform_OrganizationPage">
+<arguments>
+<arg>testtest</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_ORG_ramark}</arg>
+<arg>${org_ramark}</arg>
+</arguments>
+<msg timestamp="20190814 15:56:02.106" level="INFO">Typing text 'testtest' into text field 'class:inputremark'.</msg>
+<status status="PASS" starttime="20190814 15:56:02.106" endtime="20190814 15:56:02.439"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:02.105" endtime="20190814 15:56:02.439"></status>
+</kw>
+<kw name="click element button neat" library="Platform_OrganizationPage">
+<kw name="Click element when is enabled" library="WebShare">
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_NEATBUTTON}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>12</arg>
+<arg>100ms</arg>
+<arg>Wait until element is enabled</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20190814 15:56:02.441" endtime="20190814 15:56:02.551"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:02.441" endtime="20190814 15:56:02.551"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>12</arg>
+<arg>100ms</arg>
+<arg>Wait until element is visible</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20190814 15:56:02.552" endtime="20190814 15:56:02.640"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:02.551" endtime="20190814 15:56:02.640"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>20</arg>
+<arg>300ms</arg>
+<arg>click element</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20190814 15:56:02.642" level="INFO">Clicking element 'id:button_next_step'.</msg>
+<status status="PASS" starttime="20190814 15:56:02.641" endtime="20190814 15:56:02.839"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:02.640" endtime="20190814 15:56:02.839"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:02.440" endtime="20190814 15:56:02.841"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20190814 15:56:04.843" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190814 15:56:02.842" endtime="20190814 15:56:04.845"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:02.439" endtime="20190814 15:56:04.846"></status>
+</kw>
+<kw name="Set cus_info" library="Platform_OrganizationPage">
+<kw name="Set cus_num" library="Platform_OrganizationPage">
+<arguments>
+<arg>zdh002</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_NUMBER}</arg>
+<arg>${cusNum}</arg>
+</arguments>
+<msg timestamp="20190814 15:56:04.854" level="INFO">Typing text 'zdh002' into text field 'id:cusNum'.</msg>
+<status status="PASS" starttime="20190814 15:56:04.851" endtime="20190814 15:56:05.256"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:04.849" endtime="20190814 15:56:05.256"></status>
+</kw>
+<kw name="Set cus_name" library="Platform_OrganizationPage">
+<arguments>
+<arg>001客户</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_NAME}</arg>
+<arg>${cusName}</arg>
+</arguments>
+<msg timestamp="20190814 15:56:05.257" level="INFO">Typing text '001客户' into text field 'id:cusName'.</msg>
+<status status="PASS" starttime="20190814 15:56:05.257" endtime="20190814 15:56:05.586"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:05.256" endtime="20190814 15:56:05.586"></status>
+</kw>
+<kw name="Set cus_cuNature" library="Platform_OrganizationPage">
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_CUNATURE}</arg>
+<arg>${cuNature}</arg>
+</arguments>
+<msg timestamp="20190814 15:56:05.592" level="INFO">Selecting options from selection list 'id:cuNature' by index 1.</msg>
+<status status="PASS" starttime="20190814 15:56:05.587" endtime="20190814 15:56:05.793"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:05.586" endtime="20190814 15:56:05.793"></status>
+</kw>
+<kw name="Set cus_serviceStatus" library="Platform_OrganizationPage">
+<arguments>
+<arg>2</arg>
+</arguments>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_SERVICESTATUS}</arg>
+<arg>${serviceStatus}</arg>
+</arguments>
+<msg timestamp="20190814 15:56:05.794" level="INFO">Selecting options from selection list 'id:serviceStatus' by index 2.</msg>
+<status status="PASS" starttime="20190814 15:56:05.794" endtime="20190814 15:56:06.016"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:05.793" endtime="20190814 15:56:06.016"></status>
+</kw>
+<kw name="Set cus_correctionFactor" library="Platform_OrganizationPage">
+<arguments>
+<arg>4</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_CORRECTIONFACTOR}</arg>
+<arg>${correctionFactor}</arg>
+</arguments>
+<msg timestamp="20190814 15:56:06.017" level="INFO">Typing text '4' into text field 'id:correctionFactor'.</msg>
+<status status="PASS" starttime="20190814 15:56:06.017" endtime="20190814 15:56:06.228"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:06.016" endtime="20190814 15:56:06.229"></status>
+</kw>
+<kw name="Set cus_floorSpace" library="Platform_OrganizationPage">
+<arguments>
+<arg>356</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_FLOORSPACE}</arg>
+<arg>${floorSpace}</arg>
+</arguments>
+<msg timestamp="20190814 15:56:06.230" level="INFO">Typing text '356' into text field 'id:floorSpace'.</msg>
+<status status="PASS" starttime="20190814 15:56:06.230" endtime="20190814 15:56:06.506"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:06.229" endtime="20190814 15:56:06.506"></status>
+</kw>
+<kw name="Set cus_serviceFloorArea" library="Platform_OrganizationPage">
+<arguments>
+<arg>200</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_SERVICEFLOORAREA}</arg>
+<arg>${serviceFloorArea}</arg>
+</arguments>
+<msg timestamp="20190814 15:56:06.508" level="INFO">Typing text '200' into text field 'id:serviceFloorArea'.</msg>
+<status status="PASS" starttime="20190814 15:56:06.508" endtime="20190814 15:56:06.796"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:06.507" endtime="20190814 15:56:06.797"></status>
+</kw>
+<kw name="Set cus_population" library="Platform_OrganizationPage">
+<arguments>
+<arg>5</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_POPULATION}</arg>
+<arg>${population}</arg>
+</arguments>
+<msg timestamp="20190814 15:56:06.798" level="INFO">Typing text '5' into text field 'id:population'.</msg>
+<status status="PASS" starttime="20190814 15:56:06.798" endtime="20190814 15:56:06.999"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:06.797" endtime="20190814 15:56:06.999"></status>
+</kw>
+<kw name="Set cus_tel" library="Platform_OrganizationPage">
+<arguments>
+<arg>15245125625</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_TEL}</arg>
+<arg>${tel}</arg>
+</arguments>
+<msg timestamp="20190814 15:56:07.001" level="INFO">Typing text '15245125625' into text field 'id:tel'.</msg>
+<status status="PASS" starttime="20190814 15:56:07.000" endtime="20190814 15:56:07.513"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:06.999" endtime="20190814 15:56:07.513"></status>
+</kw>
+<kw name="Set cus_email" library="Platform_OrganizationPage">
+<arguments>
+<arg>15241@163.com</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_EMAIL}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20190814 15:56:07.515" level="INFO">Typing text '15241@163.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20190814 15:56:07.514" endtime="20190814 15:56:08.096"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:07.514" endtime="20190814 15:56:08.096"></status>
+</kw>
+<kw name="Set cus_remark" library="Platform_OrganizationPage">
+<arguments>
+<arg>自动化测试test</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_REMARK}</arg>
+<arg>${remark}</arg>
+</arguments>
+<msg timestamp="20190814 15:56:08.098" level="INFO">Typing text '自动化测试test' into text field 'id:remark'.</msg>
+<status status="PASS" starttime="20190814 15:56:08.097" endtime="20190814 15:56:08.539"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:08.096" endtime="20190814 15:56:08.540"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:04.847" endtime="20190814 15:56:08.540"></status>
+</kw>
+<kw name="Click button orgComplete" library="Platform_OrganizationPage">
+<kw name="Click element when is enabled" library="WebShare">
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_ORGCOMPLETE}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>12</arg>
+<arg>100ms</arg>
+<arg>Wait until element is enabled</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20190814 15:56:08.543" endtime="20190814 15:56:08.617"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:08.542" endtime="20190814 15:56:08.617"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>12</arg>
+<arg>100ms</arg>
+<arg>Wait until element is visible</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20190814 15:56:08.618" endtime="20190814 15:56:08.674"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:08.617" endtime="20190814 15:56:08.676"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>20</arg>
+<arg>300ms</arg>
+<arg>click element</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20190814 15:56:08.678" level="INFO">Clicking element 'id:button_accomplish'.</msg>
+<status status="PASS" starttime="20190814 15:56:08.677" endtime="20190814 15:56:08.848"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:08.677" endtime="20190814 15:56:08.848"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:08.541" endtime="20190814 15:56:08.848"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190814 15:56:13.849" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190814 15:56:08.849" endtime="20190814 15:56:13.851"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:08.540" endtime="20190814 15:56:13.852"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:55.303" endtime="20190814 15:56:13.854"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20190814 15:56:16.868" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20190814 15:56:13.867" endtime="20190814 15:56:16.870"></status>
+</kw>
+<kw name="Then deleted organization">
+<kw name="wait for loading page" library="Platform_Common">
+<doc>Wait for dissapearing all loading page icons</doc>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>20ms</arg>
+<arg>reason=wait for load loading indicator</arg>
+</arguments>
+<msg timestamp="20190814 15:56:16.906" level="INFO">Slept 20 milliseconds</msg>
+<msg timestamp="20190814 15:56:16.907" level="INFO">wait for load loading indicator</msg>
+<status status="PASS" starttime="20190814 15:56:16.881" endtime="20190814 15:56:16.908"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>${WEB_PLATFORM_SELENIUM_TIMEOUT}</arg>
+<arg>20 ms</arg>
+<arg>Page Should Not Contain element</arg>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_SELENIUM_TIMEOUT}</arg>
+<arg>20 ms</arg>
+<arg>Page Should Not Contain element</arg>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190814 15:56:17.274" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:56:16.927" endtime="20190814 15:56:17.274"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190814 15:56:17.590" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:56:17.295" endtime="20190814 15:56:17.591"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190814 15:56:17.940" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:56:17.611" endtime="20190814 15:56:17.941"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190814 15:56:18.330" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:56:17.961" endtime="20190814 15:56:18.330"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190814 15:56:18.624" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:56:18.351" endtime="20190814 15:56:18.624"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190814 15:56:19.012" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:56:18.645" endtime="20190814 15:56:19.012"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190814 15:56:19.223" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:56:19.033" endtime="20190814 15:56:19.224"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190814 15:56:19.665" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:56:19.244" endtime="20190814 15:56:19.666"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190814 15:56:20.037" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:56:19.686" endtime="20190814 15:56:20.037"></status>
+</kw>
+<msg timestamp="20190814 15:56:20.037" level="FAIL">Keyword 'Page Should Not Contain element' failed after retrying for 3 seconds. The last error was: Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20190814 15:56:16.923" endtime="20190814 15:56:20.038"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:16.910" endtime="20190814 15:56:20.038"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:16.878" endtime="20190814 15:56:20.038"></status>
+</kw>
+<kw name="Select list deleted_org_info" library="Platform_OrganizationPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[contains(@id,"jqg_organizationGrid_1")]</arg>
+</arguments>
+<msg timestamp="20190814 15:56:20.039" level="INFO">Clicking element '//input[contains(@id,"jqg_organizationGrid_1")]'.</msg>
+<status status="PASS" starttime="20190814 15:56:20.039" endtime="20190814 15:56:20.205"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20190814 15:56:22.206" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190814 15:56:20.206" endtime="20190814 15:56:22.207"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:20.038" endtime="20190814 15:56:22.208"></status>
+</kw>
+<kw name="Click bottom button deleted" library="Platform_OrganizationPage">
+<kw name="Get bottom button" library="Platform_OrganizationPage">
+<arguments>
+<arg>删除</arg>
+</arguments>
+<assign>
+<var>${add_button_ele}</var>
+</assign>
+<msg timestamp="20190814 15:56:22.225" level="INFO">${add_button_ele} = //td[@id="organizationPager_left"]/table/tbody/tr/td[@title="删除"]</msg>
+<status status="PASS" starttime="20190814 15:56:22.221" endtime="20190814 15:56:22.225"></status>
+</kw>
+<kw name="Click element when is enabled" library="WebShare">
+<arguments>
+<arg>${add_button_ele}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>12</arg>
+<arg>100ms</arg>
+<arg>Wait until element is enabled</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20190814 15:56:22.233" endtime="20190814 15:56:22.342"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:22.230" endtime="20190814 15:56:22.342"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>12</arg>
+<arg>100ms</arg>
+<arg>Wait until element is visible</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20190814 15:56:22.344" endtime="20190814 15:56:22.414"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:22.343" endtime="20190814 15:56:22.414"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>20</arg>
+<arg>300ms</arg>
+<arg>click element</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20190814 15:56:22.416" level="INFO">Clicking element '//td[@id="organizationPager_left"]/table/tbody/tr/td[@title="删除"]'.</msg>
+<status status="PASS" starttime="20190814 15:56:22.416" endtime="20190814 15:56:22.572"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:22.415" endtime="20190814 15:56:22.573"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:22.226" endtime="20190814 15:56:22.573"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20190814 15:56:24.574" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190814 15:56:22.573" endtime="20190814 15:56:24.575"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:22.209" endtime="20190814 15:56:24.577"></status>
+</kw>
+<kw name="Set deletde reason" library="Platform_OrganizationPage">
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_DEMOSELECT}</arg>
+<arg>${demoSelect}</arg>
+</arguments>
+<msg timestamp="20190814 15:56:24.584" level="INFO">Selecting options from selection list 'id:demoSelect' by index 1.</msg>
+<status status="PASS" starttime="20190814 15:56:24.582" endtime="20190814 15:56:24.879"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:24.579" endtime="20190814 15:56:24.880"></status>
+</kw>
+<kw name="Click del_button_confirm" library="Platform_OrganizationPage">
+<kw name="Click element when is enabled" library="WebShare">
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_DELBUTTONCONFIM}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>12</arg>
+<arg>100ms</arg>
+<arg>Wait until element is enabled</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20190814 15:56:24.882" endtime="20190814 15:56:24.967"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:24.881" endtime="20190814 15:56:24.967"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>12</arg>
+<arg>100ms</arg>
+<arg>Wait until element is visible</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20190814 15:56:24.969" endtime="20190814 15:56:25.032"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:24.968" endtime="20190814 15:56:25.032"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>20</arg>
+<arg>300ms</arg>
+<arg>click element</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20190814 15:56:25.034" level="INFO">Clicking element 'id:remove_button_confirm'.</msg>
+<status status="PASS" starttime="20190814 15:56:25.033" endtime="20190814 15:56:25.187"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:25.033" endtime="20190814 15:56:25.187"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:24.881" endtime="20190814 15:56:25.187"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190814 15:56:30.188" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190814 15:56:25.187" endtime="20190814 15:56:30.190"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:24.880" endtime="20190814 15:56:30.191"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:56:16.874" endtime="20190814 15:56:30.192"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:32.107" endtime="20190814 15:56:30.194" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20190809 09:26:49.016" endtime="20190809 09:28:13.255"></status>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190814 15:56:30.207" endtime="20190814 15:56:32.628"></status>
+</kw>
+<status status="PASS" starttime="20190814 15:55:14.077" endtime="20190814 15:56:32.629"></status>
 </suite>
 <statistics>
 <total>
@@ -465,5 +1752,6 @@
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20190814 15:55:15.256" level="ERROR">Error in file 'E:\RobotFramework\RF_test\engines\web\Platform\PlatformShare.robot': UnicodeDecodeError: 'utf8' codec can't decode byte 0xcc in position 46: invalid continuation byte</msg>
 </errors>
 </robot>
