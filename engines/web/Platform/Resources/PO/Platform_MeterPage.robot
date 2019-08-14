@@ -1,3 +1,5 @@
+#-*- coding: utf-8 -*-
+
 *** Settings ***
 Resource     ../Platform_Common.robot
 

@@ -1,3 +1,5 @@
+﻿#-*- coding: utf-8 -*-
+#coding: utf-8
 *** Settings ***
 Library   SeleniumLibrary    run_on_failure=Nothing
 Library           Process
@@ -25,8 +27,9 @@ Start Platform with default user account
     ${chrome options}    Call Method    ${chrome options}    to_capabilities
     Call Method    ${chrome noProxy}    add_to_capabilities    ${chrome options}
     Create Webdriver    Chrome    desired_capabilities=${chrome options}
+    Maximize Browser Window
     Go to    ${WEB_PLATFORM_URL}
-    sleep  20s
+    sleep  2s
     Log in
 
 
