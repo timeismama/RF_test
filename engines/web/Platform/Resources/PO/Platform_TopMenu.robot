@@ -13,3 +13,6 @@ Get into organization page
 #
 #Get into meter page
 #    Click or use url  meter
+
+Get into customer page
+    Click or use url  customer

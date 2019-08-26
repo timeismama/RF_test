@@ -16,7 +16,7 @@ tin-xx : Add meter
 
 *** Keywords ***
 User in meter management page
-    Platform_TopMenu.Get into meter page
+#    Platform_TopMenu.Get into meter page
 
 click ungroup tree
     Platform_Common.Select unGroup left tree button

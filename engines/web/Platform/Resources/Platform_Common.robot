@@ -8,6 +8,34 @@ ${WEB_PLATFORM_USER_PASSWORD}    radio123
 ${WEB_PLATFORM_SELENIUM_TIMEOUT}    3s
 ${WEB_PLATFORM_LOADING_PAGE_ICON}   //img[@id="organizationLoader"]
 
+# 向导第二步客户信息
+${web_PLATFORM_CUSTOMER_NUMBER}  id:cusNum
+${web_PLATFORM_CUSTOMER_NAME}  id:cusName
+${web_PLATFORM_CUSTOMER_CUNATURE}  id:cuNature
+${web_PLATFORM_CUSTOMER_SERVICESTATUS}  id:serviceStatus
+${web_PLATFORM_CUSTOMER_CORRECTIONFACTOR}  id:correctionFactor
+${web_PLATFORM_CUSTOMER_FLOORSPACE}  id:floorSpace
+${web_PLATFORM_CUSTOMER_SERVICEFLOORAREA}  id:serviceFloorArea
+${web_PLATFORM_CUSTOMER_TEL}  id:tel
+${web_PLATFORM_CUSTOMER_EMAIL}  id:email
+${web_PLATFORM_CUSTOMER_POPULATION}  id:population
+${web_PLATFORM_CUSTOMER_REMARK}  id:remark
+${web_PLATFORM_CUSTOMER_ORGCOMPLETE}  id:button_accomplish
+${web_PLATFORM_CUSTOMER_NEATBUTTON}  id:button_next_step
+
+#   删除弹框的错误原因
+${web_PLATFORM_CUSTOMER_DEMOSELECT}  id:demoSelect
+
+#   确认删除按钮
+${web_PLATFORM_CUSTOMER_REMOVEBUTTONCONFIRM}  id:remove_button_confirm
+${web_PLATFORM_CUSTOMER_REMOVEBUTTONCANCEL}  remove_button_cancel
+
+#   编辑提醒框中按钮
+${web_PLATFORM_CUSTOMER_CONFIRMbUTTON}  id:confirm_button_confirm
+
+#   列表id
+${web_PLATFORM_CUSTOMER_CUSTOMERGRIDONE}  id:customerGrid
+
 *** Keywords ***
 wait for loading page
     [Documentation]    Wait for dissapearing all loading page icons
@@ -16,6 +44,119 @@ wait for loading page
 
 Select unGroup left tree button
     click element when is enabled    //span[contains(text(),'未分组')]
+
+
+#   列表中的添加、编辑、删除、全部删除按钮
+Get bottom button
+    [Arguments]     ${td_id}  ${button_title}
+    [Return]    //td[@id="${td_id}"]/table/tbody/tr/td[@title="${button_title}"]
+
+#     客户添加向导第一步
+#   客户编号
+Set cus_num
+    [Arguments]  ${cusNum}
+    input text  ${web_PLATFORM_CUSTOMER_NUMBER}  ${cusNum}
+
+#   客户名称
+Set cus_name
+   [Arguments]  ${cusName}
+    input text  ${web_PLATFORM_CUSTOMER_NAME}  ${cusName}
+
+#   客户性质
+Set cus_cuNature
+    [Arguments]  ${cuNature}
+    select from list by index  ${web_PLATFORM_CUSTOMER_CUNATURE}  ${cuNature}
+
+#   供热状态
+Set cus_serviceStatus
+    [Arguments]  ${serviceStatus}
+    select from list by index  ${web_PLATFORM_CUSTOMER_SERVICESTATUS}  ${serviceStatus}
+
+#    修正系数
+Set cus_correctionFactor
+    [Arguments]  ${correctionFactor}
+    input text  ${web_PLATFORM_CUSTOMER_CORRECTIONFACTOR}  ${correctionFactor}
+
+#    建筑面积
+Set cus_floorSpace
+    [Arguments]  ${floorSpace}
+    input text  ${web_PLATFORM_CUSTOMER_FLOORSPACE}  ${floorSpace}
+
+#    使用面积
+Set cus_serviceFloorArea
+    [Arguments]  ${serviceFloorArea}
+    input text  ${web_PLATFORM_CUSTOMER_SERVICEFLOORAREA}  ${serviceFloorArea}
+
+#    联系方式
+Set cus_tel
+    [Arguments]  ${tel}
+    input text  ${web_PLATFORM_CUSTOMER_TEL}  ${tel}
+
+#    电子邮箱
+Set cus_email
+    [Arguments]  ${email}
+    input text  ${web_PLATFORM_CUSTOMER_EMAIL}  ${email}
+
+#    人口数
+Set cus_population
+    [Arguments]  ${population}
+    input text  ${web_PLATFORM_CUSTOMER_POPULATION}  ${population}
+
+#   备注
+Set cus_remark
+    [Arguments]  ${remark}
+    input text  ${web_PLATFORM_CUSTOMER_REMARK}  ${remark}
+
+#    客户信息相关
+Set cus_info
+    [Arguments]  ${cus_num}  ${cus_name}  ${cus_cuNature}  ${cus_serviceStatus}  ${cus_correctionfactor}  ${cus_floorSpace}  ${cus_serviceFloorArea}  ${cus_population}  ${cus_tel}  ${cus_email}  ${cus_remark}
+    Set cus_num  ${cus_num}
+    Set cus_name  ${cus_name}
+    Set cus_cuNature  ${cus_cuNature}
+    Set cus_serviceStatus  ${cus_serviceStatus}
+    Set cus_correctionfactor  ${cus_correctionfactor}
+    Set cus_floorSpace  ${cus_floorSpace}
+    Set cus_serviceFloorArea  ${cus_serviceFloorArea}
+    Set cus_population  ${cus_population}
+    Set cus_tel  ${cus_tel}
+    Set cus_email  ${cus_email}
+    Set cus_remark  ${cus_remark}
+    sleep  5s
+
+#    选中列表中某一行
+Select list one row
+    [Arguments]  ${row_id}
+    click element  //input[contains(@id,"${row_id}")]
+    sleep  2s
+
+#    输入删除原因
+Set deletde reason
+    [Arguments]  ${demoSelect}
+    select from list by index  ${web_PLATFORM_CUSTOMER_DEMOSELECT}  ${demoSelect}
+    sleep  2s
+
+#    点击删除确认按钮
+Click delete confirm button
+    click element when is enabled  ${web_PLATFORM_CUSTOMER_REMOVEBUTTONCONFIRM}
+    sleep  2s
+
+#    点击删除取消按钮
+Click delete cancel button
+    click element when is enabled  ${web_PLATFORM_CUSTOMER_REMOVEBUTTONCANCEL}
+    sleep  2s
+
+#    点击确认编辑按钮
+Click button_confirm
+    click element when is enabled  ${web_PLATFORM_CUSTOMER_CONFIRMbUTTON}
+    sleep  2s
+
+#    判断列表中的是否存在值
+Click list is value
+    [Arguments]  ${table_id}
+    ${table}=  get element size  //table[@id="${table_id}"]
+    ${choose}=  Click left ztree button  customerOrgTree_4_a
+    run keyword if  '(1356，0)' in $table  log to console  ${choose}
+    sleep  2s
 
 
 
