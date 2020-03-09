@@ -2,7 +2,7 @@
 Resource    ../PlatformShare.robot
 
 *** Variables ***
-${WEB_PLATFORM_URL}   http://demo.metering-cloud.com/platform25
+${WEB_PLATFORM_URL}   http://demo.metering-cloud.com/platform252
 ${WEB_PLATFORM_USER_NAME}    admin
 ${WEB_PLATFORM_USER_PASSWORD}    radio123
 ${WEB_PLATFORM_SELENIUM_TIMEOUT}    3s
@@ -28,13 +28,21 @@ ${web_PLATFORM_CUSTOMER_DEMOSELECT}  id:demoSelect
 
 #   确认删除按钮
 ${web_PLATFORM_CUSTOMER_REMOVEBUTTONCONFIRM}  id:remove_button_confirm
-${web_PLATFORM_CUSTOMER_REMOVEBUTTONCANCEL}  remove_button_cancel
+${web_PLATFORM_CUSTOMER_REMOVEBUTTONCANCEL}  id:remove_button_cancel
 
 #   编辑提醒框中按钮
 ${web_PLATFORM_CUSTOMER_CONFIRMbUTTON}  id:confirm_button_confirm
 
 #   列表id
 ${web_PLATFORM_CUSTOMER_CUSTOMERGRIDONE}  id:customerGrid
+
+#   更换仪表
+${web_PLATFORM_REPLACEMETER_WARM_CONFIEM}  id:warm_confirm
+${web_PLATFORM_REPLACEMETER_GUIDENEXT}  id:replaceGuideNext
+${web_PLATFORM_REPLACEMETER_GUIDEOVER}  id:replaceGuideOver
+
+#   温馨提示
+${web_PLATFORM_WARM_DELDIALOG_CONFIRM}  id:delDialog_confirm
 
 *** Keywords ***
 wait for loading page
@@ -121,7 +129,12 @@ Set cus_info
     Set cus_tel  ${cus_tel}
     Set cus_email  ${cus_email}
     Set cus_remark  ${cus_remark}
-    sleep  5s
+    sleep  2s
+
+#   验证信息是否追加成功
+Add cuatomer success
+    [Arguments]    ${text}    ${loglevel}=INFO
+    Page Should Contain    ${text}    ${loglevel}
 
 #    选中列表中某一行
 Select list one row
@@ -157,6 +170,47 @@ Click list is value
     ${choose}=  Click left ztree button  customerOrgTree_4_a
     run keyword if  '(1356，0)' in $table  log to console  ${choose}
     sleep  2s
+
+#    编辑向导框中组织树的选择
+Click orgTree
+    [Arguments]  ${orgTreeId}
+    click element  //a[contains(@id,"${orgTreeId}")]
+
+#    提示语中的确认按钮
+Click warm comfirem
+    click element when is enabled  ${web_PLATFORM_REPLACEMETER_WARM_CONFIEM}
+
+
+#    更换仪表相关信息  //tr[contains(@id,"${rowId}")/span]
+#    旧表截止数据
+Select meterReplace_oldMeter_measval
+    [Arguments]  ${rowId}
+    click element  //span[@id='${rowId}']
+    sleep  2s
+
+
+#    添加抄表数据
+Click bottom bottom replace oldMeter add
+    ${add_button_ele}     Get bottom button    endMeasPager_left  添加
+    click element when is enabled   ${add_button_ele}
+    sleep  2s
+    Click warm comfirem
+
+#    下一步按钮
+Click meterReplace_next
+    click element when is enabled  ${web_PLATFORM_REPLACEMETER_GUIDENEXT}
+    sleep  2s
+
+#    完成按钮
+Click meterReplace_over
+    click element when is enabled  ${web_PLATFORM_REPLACEMETER_GUIDEOVER}
+    sleep  2s
+
+#    温馨提示语
+Click warm delDialog_confirm
+    click element when is enabled  ${web_PLATFORM_WARM_DELDIALOG_CONFIRM}
+    sleep  2s
+
 
 
 

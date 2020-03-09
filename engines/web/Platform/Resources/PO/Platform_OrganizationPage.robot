@@ -41,8 +41,9 @@ Set org_name
 
 #    组织树选择
 Set org_ztree
+    [Arguments]  ${orgTreeId}
     click element  ${WEB_PLATFORM_ORG_PARENTNAME}
-    click element  //a[contains(@id,"orgTableEditOrgTree_2_a")]
+    click orgtree  ${orgTreeId}
 
 #  备注
 Set org_ramark
@@ -71,7 +72,7 @@ click element button
 #    客户信息向导第二步完成按钮
 Click button orgComplete
     click element when is enabled  ${web_PLATFORM_CUSTOMER_ORGCOMPLETE}
-    sleep  5s
+    sleep  2s
 
 #   组织编辑
 

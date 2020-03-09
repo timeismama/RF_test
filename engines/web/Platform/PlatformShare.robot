@@ -1,5 +1,6 @@
 ﻿#-*- coding: utf-8 -*-
 #coding: utf-8
+
 *** Settings ***
 Library   SeleniumLibrary    run_on_failure=Nothing
 Library           Process
@@ -10,13 +11,15 @@ Library           FakerLibrary    locale=de_DE
 Library           Collections
 Library           String
 
-Resource        ../WebShare.robot
-Resource        Resources/PO/Platform_TopMenu.robot
-Resource        Resources/Platform_Common.robot
-Resource        Resources/PO/Platform_LoginPage.robot
-Resource        Resources/PO/Platform_OrganizationPage.robot
-Resource        Resources/PO/Platform_MeterPage.robot
-Resource        Resources/PO/Platform_CustomerPage.robot
+
+Resource          ../WebShare.robot
+Resource          Resources/PO/Platform_TopMenu.robot
+Resource          Resources/Platform_Common.robot
+Resource          Resources/PO/Platform_LoginPage.robot
+Resource          Resources/PO/Platform_OrganizationPage.robot
+Resource          Resources/PO/Platform_CustomerPage.robot
+Resource          Resources/PO/Platform_Device.robot
+
 
 *** Keywords ***
 Start Platform with default user account

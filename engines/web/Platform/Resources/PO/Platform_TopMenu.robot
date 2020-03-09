@@ -11,8 +11,8 @@ Click or use url
 Get into organization page
     Click or use url    organization
 #
-#Get into meter page
-#    Click or use url  meter
+Get into meter page
+    Click or use url  meter
 
 Get into customer page
     Click or use url  customer
