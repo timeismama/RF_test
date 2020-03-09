@@ -17,6 +17,7 @@ IP-xxx : Add organization
     Given User is in organization info page
     When add organization
     Then add success
+    [Teardown]  deleted organization
 
 IP-edit: edit organization
 #    编辑组织
@@ -69,7 +70,7 @@ edit organization
 deleted organization
     wait for loading page
 #    选中某一行
-    Select list one row  jqg_organizationGrid_1
+    Select list one row  jqg_organizationGrid_0
     Platform_OrganizationPage.Click bottom button deleted
     Set deletde reason  1
     Click delete confirm button
