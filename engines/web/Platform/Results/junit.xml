@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Organization Info" tests="1" errors="0" failures="0" skip="0">
-<testcase classname="Organization Info" name="IP-xxx : Add organization" time="19">
+<testcase classname="Organization Info" name="IP-xxx : Add organization" time="34">
 </testcase>
 </testsuite>

@@ -90,3 +90,8 @@ Click button relevance
 Click button cancel relevance
     click element when is enabled  ${web_PLATFORM_CUSTOMER_BUTTONCANCELRELEVANCE}
     sleep  2s
+
+#   验证信息是否追加成功
+Add customer success
+    [Arguments]    ${text}    ${loglevel}=INFO
+    Page Should Contain    ${text}    ${loglevel}

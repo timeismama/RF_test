@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.0.2 (PyPy 2.7.13 on win32)" generated="20200309 13:14:27.445">
+<robot generator="Robot 3.0.2 (PyPy 2.7.13 on win32)" generated="20200310 10:14:13.663">
 <suite id="s1" name="Organization Info" source="E:\RobotFramework\RF_test\engines\web\Platform\Tests\Customer_Management\Organization_Info.robot">
 <kw name="Start Platform with default user account" library="PlatformShare" type="setup">
 <doc>Open and maximize browser with selected url</doc>
@@ -12,8 +12,8 @@
 <assign>
 <var>${chrome options}</var>
 </assign>
-<msg timestamp="20200309 13:14:33.063" level="INFO">${chrome options} = &lt;selenium.webdriver.chrome.options.Options object at 0x03b89e50&gt;</msg>
-<status status="PASS" starttime="20200309 13:14:33.062" endtime="20200309 13:14:33.063"></status>
+<msg timestamp="20200310 10:14:15.498" level="INFO">${chrome options} = &lt;selenium.webdriver.chrome.options.Options object at 0x030d41b0&gt;</msg>
+<status status="PASS" starttime="20200310 10:14:15.497" endtime="20200310 10:14:15.498"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -24,8 +24,8 @@
 <assign>
 <var>${chrome noProxy}</var>
 </assign>
-<msg timestamp="20200309 13:14:33.064" level="INFO">${chrome noProxy} = &lt;selenium.webdriver.common.proxy.Proxy object at 0x03b89e70&gt;</msg>
-<status status="PASS" starttime="20200309 13:14:33.063" endtime="20200309 13:14:33.064"></status>
+<msg timestamp="20200310 10:14:15.501" level="INFO">${chrome noProxy} = &lt;selenium.webdriver.common.proxy.Proxy object at 0x030d45f0&gt;</msg>
+<status status="PASS" starttime="20200310 10:14:15.500" endtime="20200310 10:14:15.501"></status>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <doc>Calls the named method of the given object with the provided arguments.</doc>
@@ -34,7 +34,7 @@
 <arg>add_argument</arg>
 <arg>--lang\=en-US</arg>
 </arguments>
-<status status="PASS" starttime="20200309 13:14:33.066" endtime="20200309 13:14:33.067"></status>
+<status status="PASS" starttime="20200310 10:14:15.502" endtime="20200310 10:14:15.503"></status>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <doc>Calls the named method of the given object with the provided arguments.</doc>
@@ -43,7 +43,7 @@
 <arg>add_argument</arg>
 <arg>--disable-single-click-autofill</arg>
 </arguments>
-<status status="PASS" starttime="20200309 13:14:33.068" endtime="20200309 13:14:33.069"></status>
+<status status="PASS" starttime="20200310 10:14:15.504" endtime="20200310 10:14:15.505"></status>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <doc>Calls the named method of the given object with the provided arguments.</doc>
@@ -54,8 +54,8 @@
 <assign>
 <var>${chrome options}</var>
 </assign>
-<msg timestamp="20200309 13:14:33.071" level="INFO">${chrome options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'extensions': [], 'args': [u'--lang=en-US', u'--disable-single-click-autofill']}}</msg>
-<status status="PASS" starttime="20200309 13:14:33.070" endtime="20200309 13:14:33.071"></status>
+<msg timestamp="20200310 10:14:15.506" level="INFO">${chrome options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'extensions': [], 'args': [u'--lang=en-US', u'--disable-single-click-autofill']}}</msg>
+<status status="PASS" starttime="20200310 10:14:15.505" endtime="20200310 10:14:15.506"></status>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <doc>Calls the named method of the given object with the provided arguments.</doc>
@@ -64,7 +64,7 @@
 <arg>add_to_capabilities</arg>
 <arg>${chrome options}</arg>
 </arguments>
-<status status="PASS" starttime="20200309 13:14:33.071" endtime="20200309 13:14:33.072"></status>
+<status status="PASS" starttime="20200310 10:14:15.507" endtime="20200310 10:14:15.507"></status>
 </kw>
 <kw name="Create Webdriver" library="SeleniumLibrary">
 <doc>Creates an instance of Selenium WebDriver.</doc>
@@ -72,28 +72,28 @@
 <arg>Chrome</arg>
 <arg>desired_capabilities=${chrome options}</arg>
 </arguments>
-<msg timestamp="20200309 13:14:33.073" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<status status="PASS" starttime="20200309 13:14:33.072" endtime="20200309 13:14:36.617"></status>
+<msg timestamp="20200310 10:14:15.508" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20200310 10:14:15.508" endtime="20200310 10:14:19.225"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20200309 13:14:36.618" endtime="20200309 13:14:37.780"></status>
+<status status="PASS" starttime="20200310 10:14:19.225" endtime="20200310 10:14:20.394"></status>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <doc>Navigates the active browser instance to the provided ``url``.</doc>
 <arguments>
 <arg>${WEB_PLATFORM_URL}</arg>
 </arguments>
-<msg timestamp="20200309 13:14:37.781" level="INFO">Opening url 'http://demo.metering-cloud.com/platform252'</msg>
-<status status="PASS" starttime="20200309 13:14:37.780" endtime="20200309 13:14:42.935"></status>
+<msg timestamp="20200310 10:14:20.397" level="INFO">Opening url 'http://demo.metering-cloud.com/test'</msg>
+<status status="PASS" starttime="20200310 10:14:20.396" endtime="20200310 10:14:31.361"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20200309 13:14:44.937" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200309 13:14:42.936" endtime="20200309 13:14:44.937"></status>
+<msg timestamp="20200310 10:14:33.382" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200310 10:14:31.362" endtime="20200310 10:14:33.385"></status>
 </kw>
 <kw name="Log in" library="PlatformShare">
 <doc>login platform by ginven a default account</doc>
@@ -107,10 +107,10 @@
 <arg>${WEB_PLATFORM_LP_USER_INPUTBOX}</arg>
 <arg>${value}</arg>
 </arguments>
-<msg timestamp="20200309 13:14:44.945" level="INFO">Typing text 'admin' into text field 'id:account'.</msg>
-<status status="PASS" starttime="20200309 13:14:44.944" endtime="20200309 13:14:46.950"></status>
+<msg timestamp="20200310 10:14:33.425" level="INFO">Typing text 'admin' into text field 'id:account'.</msg>
+<status status="PASS" starttime="20200310 10:14:33.422" endtime="20200310 10:14:33.627"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:14:44.943" endtime="20200309 13:14:46.950"></status>
+<status status="PASS" starttime="20200310 10:14:33.418" endtime="20200310 10:14:33.627"></status>
 </kw>
 <kw name="Insert Password" library="Platform_LoginPage">
 <arguments>
@@ -122,10 +122,10 @@
 <arg>${WEB_PLATFORM_LP_PASSWORD_INPUTBOX}</arg>
 <arg>${value}</arg>
 </arguments>
-<msg timestamp="20200309 13:14:46.955" level="INFO">Typing password into text field 'id:password'.</msg>
-<status status="PASS" starttime="20200309 13:14:46.954" endtime="20200309 13:14:47.109"></status>
+<msg timestamp="20200310 10:14:33.630" level="INFO">Typing password into text field 'id:password'.</msg>
+<status status="PASS" starttime="20200310 10:14:33.629" endtime="20200310 10:14:33.773"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:14:46.951" endtime="20200309 13:14:47.109"></status>
+<status status="PASS" starttime="20200310 10:14:33.628" endtime="20200310 10:14:33.774"></status>
 </kw>
 <kw name="Click login button" library="Platform_LoginPage">
 <kw name="Click element when is enabled" library="WebShare">
@@ -145,9 +145,9 @@
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<status status="PASS" starttime="20200309 13:14:47.112" endtime="20200309 13:14:47.148"></status>
+<status status="PASS" starttime="20200310 10:14:33.776" endtime="20200310 10:14:33.828"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:14:47.111" endtime="20200309 13:14:47.148"></status>
+<status status="PASS" starttime="20200310 10:14:33.776" endtime="20200310 10:14:33.828"></status>
 </kw>
 <kw name="Wait Until Keyword Succeeds" library="BuiltIn">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -162,9 +162,9 @@
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<status status="PASS" starttime="20200309 13:14:47.150" endtime="20200309 13:14:47.233"></status>
+<status status="PASS" starttime="20200310 10:14:33.829" endtime="20200310 10:14:33.921"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:14:47.149" endtime="20200309 13:14:47.233"></status>
+<status status="PASS" starttime="20200310 10:14:33.828" endtime="20200310 10:14:33.921"></status>
 </kw>
 <kw name="Wait Until Keyword Succeeds" library="BuiltIn">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -179,12 +179,12 @@
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200309 13:14:47.235" level="INFO">Clicking element 'id:login'.</msg>
-<status status="PASS" starttime="20200309 13:14:47.234" endtime="20200309 13:14:47.297"></status>
+<msg timestamp="20200310 10:14:33.928" level="INFO">Clicking element 'id:login'.</msg>
+<status status="PASS" starttime="20200310 10:14:33.926" endtime="20200310 10:14:34.074"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:14:47.234" endtime="20200309 13:14:47.297"></status>
+<status status="PASS" starttime="20200310 10:14:33.922" endtime="20200310 10:14:34.075"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:14:47.110" endtime="20200309 13:14:47.297"></status>
+<status status="PASS" starttime="20200310 10:14:33.775" endtime="20200310 10:14:34.075"></status>
 </kw>
 <kw name="wait for loading page" library="Platform_Common">
 <doc>Wait for dissapearing all loading page icons</doc>
@@ -194,9 +194,9 @@
 <arg>20ms</arg>
 <arg>reason=wait for load loading indicator</arg>
 </arguments>
-<msg timestamp="20200309 13:14:47.332" level="INFO">Slept 20 milliseconds</msg>
-<msg timestamp="20200309 13:14:47.334" level="INFO">wait for load loading indicator</msg>
-<status status="PASS" starttime="20200309 13:14:47.311" endtime="20200309 13:14:47.334"></status>
+<msg timestamp="20200310 10:14:34.105" level="INFO">Slept 20 milliseconds</msg>
+<msg timestamp="20200310 10:14:34.106" level="INFO">wait for load loading indicator</msg>
+<status status="PASS" starttime="20200310 10:14:34.085" endtime="20200310 10:14:34.107"></status>
 </kw>
 <kw name="Run Keyword And Ignore Error" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
@@ -223,14 +223,14 @@
 <arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
 <arg>loglevel=NONE</arg>
 </arguments>
-<msg timestamp="20200309 13:14:47.354" level="INFO">Current page does not contain element '//img[@id="organizationLoader"]'.</msg>
-<status status="PASS" starttime="20200309 13:14:47.338" endtime="20200309 13:14:47.355"></status>
+<msg timestamp="20200310 10:14:34.133" level="INFO">Current page does not contain element '//img[@id="organizationLoader"]'.</msg>
+<status status="PASS" starttime="20200310 10:14:34.110" endtime="20200310 10:14:34.134"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:14:47.336" endtime="20200309 13:14:47.355"></status>
+<status status="PASS" starttime="20200310 10:14:34.108" endtime="20200310 10:14:34.134"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:14:47.335" endtime="20200309 13:14:47.355"></status>
+<status status="PASS" starttime="20200310 10:14:34.107" endtime="20200310 10:14:34.134"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:14:47.310" endtime="20200309 13:14:47.355"></status>
+<status status="PASS" starttime="20200310 10:14:34.084" endtime="20200310 10:14:34.134"></status>
 </kw>
 <kw name="Wait Until Keyword Succeeds" library="BuiltIn">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -245,24 +245,24 @@
 <arguments>
 <arg>${WEB_PLATFORM_LP_LOG_IN_BUTTON}</arg>
 </arguments>
-<msg timestamp="20200309 13:14:47.438" level="FAIL">Page should not have contained element 'id:login'.</msg>
-<status status="FAIL" starttime="20200309 13:14:47.358" endtime="20200309 13:14:47.438"></status>
+<msg timestamp="20200310 10:14:34.191" level="FAIL">Page should not have contained element 'id:login'.</msg>
+<status status="FAIL" starttime="20200310 10:14:34.136" endtime="20200310 10:14:34.191"></status>
 </kw>
 <kw name="Page Should Not Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>${WEB_PLATFORM_LP_LOG_IN_BUTTON}</arg>
 </arguments>
-<msg timestamp="20200309 13:14:59.669" level="INFO">Current page does not contain element 'id:login'.</msg>
-<status status="PASS" starttime="20200309 13:14:48.442" endtime="20200309 13:14:59.670"></status>
+<msg timestamp="20200310 10:14:46.068" level="INFO">Current page does not contain element 'id:login'.</msg>
+<status status="PASS" starttime="20200310 10:14:35.192" endtime="20200310 10:14:46.069"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:14:47.356" endtime="20200309 13:14:59.670"></status>
+<status status="PASS" starttime="20200310 10:14:34.135" endtime="20200310 10:14:46.069"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:14:47.110" endtime="20200309 13:14:59.670"></status>
+<status status="PASS" starttime="20200310 10:14:33.774" endtime="20200310 10:14:46.071"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:14:44.938" endtime="20200309 13:14:59.671"></status>
+<status status="PASS" starttime="20200310 10:14:33.387" endtime="20200310 10:14:46.071"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:14:33.061" endtime="20200309 13:14:59.671"></status>
+<status status="PASS" starttime="20200310 10:14:15.496" endtime="20200310 10:14:46.072"></status>
 </kw>
 <test id="s1-t1" name="IP-xxx : Add organization">
 <kw name="Given User is in organization info page">
@@ -271,8 +271,8 @@
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20200309 13:15:01.677" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200309 13:14:59.676" endtime="20200309 13:15:01.677"></status>
+<msg timestamp="20200310 10:14:48.079" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200310 10:14:46.078" endtime="20200310 10:14:48.079"></status>
 </kw>
 <kw name="Get into organization page" library="Platform_TopMenu">
 <kw name="Click or use url" library="Platform_TopMenu">
@@ -284,14 +284,14 @@
 <arguments>
 <arg>${WEB_PLATFORM_URL}/index.html#/${url_end}</arg>
 </arguments>
-<msg timestamp="20200309 13:15:01.681" level="INFO">Opening url 'http://demo.metering-cloud.com/platform252/index.html#/organization'</msg>
-<status status="PASS" starttime="20200309 13:15:01.680" endtime="20200309 13:15:01.859"></status>
+<msg timestamp="20200310 10:14:48.083" level="INFO">Opening url 'http://demo.metering-cloud.com/test/index.html#/organization'</msg>
+<status status="PASS" starttime="20200310 10:14:48.082" endtime="20200310 10:14:48.140"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:01.679" endtime="20200309 13:15:01.859"></status>
+<status status="PASS" starttime="20200310 10:14:48.081" endtime="20200310 10:14:48.141"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:01.678" endtime="20200309 13:15:01.860"></status>
+<status status="PASS" starttime="20200310 10:14:48.080" endtime="20200310 10:14:48.141"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:14:59.674" endtime="20200309 13:15:01.860"></status>
+<status status="PASS" starttime="20200310 10:14:46.076" endtime="20200310 10:14:48.142"></status>
 </kw>
 <kw name="When add organization">
 <kw name="wait for loading page" library="Platform_Common">
@@ -302,9 +302,9 @@
 <arg>20ms</arg>
 <arg>reason=wait for load loading indicator</arg>
 </arguments>
-<msg timestamp="20200309 13:15:01.969" level="INFO">Slept 20 milliseconds</msg>
-<msg timestamp="20200309 13:15:01.969" level="INFO">wait for load loading indicator</msg>
-<status status="PASS" starttime="20200309 13:15:01.868" endtime="20200309 13:15:01.970"></status>
+<msg timestamp="20200310 10:14:48.168" level="INFO">Slept 20 milliseconds</msg>
+<msg timestamp="20200310 10:14:48.168" level="INFO">wait for load loading indicator</msg>
+<status status="PASS" starttime="20200310 10:14:48.147" endtime="20200310 10:14:48.169"></status>
 </kw>
 <kw name="Run Keyword And Ignore Error" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
@@ -331,8 +331,8 @@
 <arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
 <arg>loglevel=NONE</arg>
 </arguments>
-<msg timestamp="20200309 13:15:02.503" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
-<status status="FAIL" starttime="20200309 13:15:01.987" endtime="20200309 13:15:02.503"></status>
+<msg timestamp="20200310 10:14:48.931" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:14:48.209" endtime="20200310 10:14:48.931"></status>
 </kw>
 <kw name="Page Should Not Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
@@ -340,8 +340,8 @@
 <arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
 <arg>loglevel=NONE</arg>
 </arguments>
-<msg timestamp="20200309 13:15:02.770" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
-<status status="FAIL" starttime="20200309 13:15:02.524" endtime="20200309 13:15:02.770"></status>
+<msg timestamp="20200310 10:14:49.230" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:14:48.975" endtime="20200310 10:14:49.231"></status>
 </kw>
 <kw name="Page Should Not Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
@@ -349,8 +349,8 @@
 <arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
 <arg>loglevel=NONE</arg>
 </arguments>
-<msg timestamp="20200309 13:15:02.928" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
-<status status="FAIL" starttime="20200309 13:15:02.809" endtime="20200309 13:15:02.928"></status>
+<msg timestamp="20200310 10:14:49.472" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:14:49.253" endtime="20200310 10:14:49.472"></status>
 </kw>
 <kw name="Page Should Not Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
@@ -358,8 +358,8 @@
 <arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
 <arg>loglevel=NONE</arg>
 </arguments>
-<msg timestamp="20200309 13:15:03.100" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
-<status status="FAIL" starttime="20200309 13:15:02.948" endtime="20200309 13:15:03.100"></status>
+<msg timestamp="20200310 10:14:49.703" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:14:49.492" endtime="20200310 10:14:49.704"></status>
 </kw>
 <kw name="Page Should Not Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
@@ -367,8 +367,8 @@
 <arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
 <arg>loglevel=NONE</arg>
 </arguments>
-<msg timestamp="20200309 13:15:03.241" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
-<status status="FAIL" starttime="20200309 13:15:03.121" endtime="20200309 13:15:03.242"></status>
+<msg timestamp="20200310 10:14:50.002" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:14:49.724" endtime="20200310 10:14:50.003"></status>
 </kw>
 <kw name="Page Should Not Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
@@ -376,8 +376,8 @@
 <arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
 <arg>loglevel=NONE</arg>
 </arguments>
-<msg timestamp="20200309 13:15:03.431" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
-<status status="FAIL" starttime="20200309 13:15:03.262" endtime="20200309 13:15:03.431"></status>
+<msg timestamp="20200310 10:14:50.271" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:14:50.023" endtime="20200310 10:14:50.271"></status>
 </kw>
 <kw name="Page Should Not Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
@@ -385,8 +385,8 @@
 <arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
 <arg>loglevel=NONE</arg>
 </arguments>
-<msg timestamp="20200309 13:15:03.591" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
-<status status="FAIL" starttime="20200309 13:15:03.453" endtime="20200309 13:15:03.591"></status>
+<msg timestamp="20200310 10:14:50.570" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:14:50.292" endtime="20200310 10:14:50.570"></status>
 </kw>
 <kw name="Page Should Not Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
@@ -394,8 +394,8 @@
 <arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
 <arg>loglevel=NONE</arg>
 </arguments>
-<msg timestamp="20200309 13:15:03.749" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
-<status status="FAIL" starttime="20200309 13:15:03.611" endtime="20200309 13:15:03.750"></status>
+<msg timestamp="20200310 10:14:50.799" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:14:50.590" endtime="20200310 10:14:50.800"></status>
 </kw>
 <kw name="Page Should Not Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
@@ -403,8 +403,8 @@
 <arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
 <arg>loglevel=NONE</arg>
 </arguments>
-<msg timestamp="20200309 13:15:03.885" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
-<status status="FAIL" starttime="20200309 13:15:03.770" endtime="20200309 13:15:03.886"></status>
+<msg timestamp="20200310 10:14:51.000" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:14:50.820" endtime="20200310 10:14:51.000"></status>
 </kw>
 <kw name="Page Should Not Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
@@ -412,69 +412,15 @@
 <arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
 <arg>loglevel=NONE</arg>
 </arguments>
-<msg timestamp="20200309 13:15:04.049" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
-<status status="FAIL" starttime="20200309 13:15:03.907" endtime="20200309 13:15:04.050"></status>
+<msg timestamp="20200310 10:14:51.221" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:14:51.020" endtime="20200310 10:14:51.221"></status>
 </kw>
-<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<arguments>
-<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
-<arg>loglevel=NONE</arg>
-</arguments>
-<msg timestamp="20200309 13:15:04.200" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
-<status status="FAIL" starttime="20200309 13:15:04.070" endtime="20200309 13:15:04.201"></status>
+<msg timestamp="20200310 10:14:51.222" level="FAIL">Keyword 'Page Should Not Contain element' failed after retrying for 3 seconds. The last error was: Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:14:48.207" endtime="20200310 10:14:51.222"></status>
 </kw>
-<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<arguments>
-<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
-<arg>loglevel=NONE</arg>
-</arguments>
-<msg timestamp="20200309 13:15:04.380" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
-<status status="FAIL" starttime="20200309 13:15:04.221" endtime="20200309 13:15:04.380"></status>
+<status status="PASS" starttime="20200310 10:14:48.205" endtime="20200310 10:14:51.222"></status>
 </kw>
-<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<arguments>
-<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
-<arg>loglevel=NONE</arg>
-</arguments>
-<msg timestamp="20200309 13:15:04.518" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
-<status status="FAIL" starttime="20200309 13:15:04.400" endtime="20200309 13:15:04.519"></status>
-</kw>
-<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<arguments>
-<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
-<arg>loglevel=NONE</arg>
-</arguments>
-<msg timestamp="20200309 13:15:04.679" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
-<status status="FAIL" starttime="20200309 13:15:04.539" endtime="20200309 13:15:04.680"></status>
-</kw>
-<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<arguments>
-<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
-<arg>loglevel=NONE</arg>
-</arguments>
-<msg timestamp="20200309 13:15:04.815" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
-<status status="FAIL" starttime="20200309 13:15:04.700" endtime="20200309 13:15:04.815"></status>
-</kw>
-<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<arguments>
-<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
-<arg>loglevel=NONE</arg>
-</arguments>
-<msg timestamp="20200309 13:15:05.004" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
-<status status="FAIL" starttime="20200309 13:15:04.835" endtime="20200309 13:15:05.004"></status>
-</kw>
-<msg timestamp="20200309 13:15:05.005" level="FAIL">Keyword 'Page Should Not Contain element' failed after retrying for 3 seconds. The last error was: Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
-<status status="FAIL" starttime="20200309 13:15:01.973" endtime="20200309 13:15:05.005"></status>
-</kw>
-<status status="PASS" starttime="20200309 13:15:01.971" endtime="20200309 13:15:05.005"></status>
-</kw>
-<status status="PASS" starttime="20200309 13:15:01.867" endtime="20200309 13:15:05.006"></status>
+<status status="PASS" starttime="20200310 10:14:48.145" endtime="20200310 10:14:51.223"></status>
 </kw>
 <kw name="Click bottom button add" library="Platform_OrganizationPage">
 <kw name="Get bottom button" library="Platform_Common">
@@ -485,8 +431,8 @@
 <assign>
 <var>${add_button_ele}</var>
 </assign>
-<msg timestamp="20200309 13:15:05.010" level="INFO">${add_button_ele} = //td[@id="organizationPager_left"]/table/tbody/tr/td[@title="添加"]</msg>
-<status status="PASS" starttime="20200309 13:15:05.009" endtime="20200309 13:15:05.010"></status>
+<msg timestamp="20200310 10:14:51.226" level="INFO">${add_button_ele} = //td[@id="organizationPager_left"]/table/tbody/tr/td[@title="添加"]</msg>
+<status status="PASS" starttime="20200310 10:14:51.225" endtime="20200310 10:14:51.226"></status>
 </kw>
 <kw name="Click element when is enabled" library="WebShare">
 <arguments>
@@ -505,9 +451,9 @@
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<status status="PASS" starttime="20200309 13:15:05.013" endtime="20200309 13:15:05.055"></status>
+<status status="PASS" starttime="20200310 10:14:51.229" endtime="20200310 10:14:51.293"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:05.012" endtime="20200309 13:15:05.056"></status>
+<status status="PASS" starttime="20200310 10:14:51.227" endtime="20200310 10:14:51.294"></status>
 </kw>
 <kw name="Wait Until Keyword Succeeds" library="BuiltIn">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -522,9 +468,9 @@
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<status status="PASS" starttime="20200309 13:15:05.057" endtime="20200309 13:15:05.098"></status>
+<status status="PASS" starttime="20200310 10:14:51.295" endtime="20200310 10:14:51.351"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:05.056" endtime="20200309 13:15:05.099"></status>
+<status status="PASS" starttime="20200310 10:14:51.294" endtime="20200310 10:14:51.351"></status>
 </kw>
 <kw name="Wait Until Keyword Succeeds" library="BuiltIn">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -539,22 +485,22 @@
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200309 13:15:05.101" level="INFO">Clicking element '//td[@id="organizationPager_left"]/table/tbody/tr/td[@title="添加"]'.</msg>
-<status status="PASS" starttime="20200309 13:15:05.100" endtime="20200309 13:15:05.216"></status>
+<msg timestamp="20200310 10:14:51.353" level="INFO">Clicking element '//td[@id="organizationPager_left"]/table/tbody/tr/td[@title="添加"]'.</msg>
+<status status="PASS" starttime="20200310 10:14:51.352" endtime="20200310 10:14:51.481"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:05.099" endtime="20200309 13:15:05.216"></status>
+<status status="PASS" starttime="20200310 10:14:51.351" endtime="20200310 10:14:51.481"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:05.011" endtime="20200309 13:15:05.217"></status>
+<status status="PASS" starttime="20200310 10:14:51.227" endtime="20200310 10:14:51.481"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20200309 13:15:07.219" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200309 13:15:05.217" endtime="20200309 13:15:07.220"></status>
+<msg timestamp="20200310 10:14:53.483" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200310 10:14:51.482" endtime="20200310 10:14:53.484"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:05.007" endtime="20200309 13:15:07.221"></status>
+<status status="PASS" starttime="20200310 10:14:51.224" endtime="20200310 10:14:53.486"></status>
 </kw>
 <kw name="Set org_name" library="Platform_OrganizationPage">
 <arguments>
@@ -566,10 +512,10 @@
 <arg>${WEB_PLATFORM_ORG_NAME}</arg>
 <arg>${org_name}</arg>
 </arguments>
-<msg timestamp="20200309 13:15:07.234" level="INFO">Typing text 'zd001' into text field 'id:orgName'.</msg>
-<status status="PASS" starttime="20200309 13:15:07.230" endtime="20200309 13:15:07.561"></status>
+<msg timestamp="20200310 10:14:53.495" level="INFO">Typing text 'zd001' into text field 'id:orgName'.</msg>
+<status status="PASS" starttime="20200310 10:14:53.491" endtime="20200310 10:14:53.779"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:07.226" endtime="20200309 13:15:07.561"></status>
+<status status="PASS" starttime="20200310 10:14:53.488" endtime="20200310 10:14:53.780"></status>
 </kw>
 <kw name="Set org_ramark" library="Platform_OrganizationPage">
 <arguments>
@@ -581,10 +527,10 @@
 <arg>${WEB_PLATFORM_ORG_ramark}</arg>
 <arg>${org_ramark}</arg>
 </arguments>
-<msg timestamp="20200309 13:15:07.583" level="INFO">Typing text '1352624' into text field 'class:inputremark'.</msg>
-<status status="PASS" starttime="20200309 13:15:07.582" endtime="20200309 13:15:07.821"></status>
+<msg timestamp="20200310 10:14:53.782" level="INFO">Typing text '1352624' into text field 'class:inputremark'.</msg>
+<status status="PASS" starttime="20200310 10:14:53.781" endtime="20200310 10:14:54.034"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:07.562" endtime="20200309 13:15:07.821"></status>
+<status status="PASS" starttime="20200310 10:14:53.780" endtime="20200310 10:14:54.034"></status>
 </kw>
 <kw name="click element button neat" library="Platform_OrganizationPage">
 <kw name="Click element when is enabled" library="WebShare">
@@ -604,9 +550,9 @@
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<status status="PASS" starttime="20200309 13:15:07.826" endtime="20200309 13:15:07.855"></status>
+<status status="PASS" starttime="20200310 10:14:54.038" endtime="20200310 10:14:54.099"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:07.824" endtime="20200309 13:15:07.855"></status>
+<status status="PASS" starttime="20200310 10:14:54.037" endtime="20200310 10:14:54.100"></status>
 </kw>
 <kw name="Wait Until Keyword Succeeds" library="BuiltIn">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -621,9 +567,9 @@
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<status status="PASS" starttime="20200309 13:15:07.857" endtime="20200309 13:15:07.877"></status>
+<status status="PASS" starttime="20200310 10:14:54.101" endtime="20200310 10:14:54.141"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:07.856" endtime="20200309 13:15:07.878"></status>
+<status status="PASS" starttime="20200310 10:14:54.100" endtime="20200310 10:14:54.141"></status>
 </kw>
 <kw name="Wait Until Keyword Succeeds" library="BuiltIn">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -638,22 +584,22 @@
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200309 13:15:07.880" level="INFO">Clicking element 'id:button_next_step'.</msg>
-<status status="PASS" starttime="20200309 13:15:07.879" endtime="20200309 13:15:08.049"></status>
+<msg timestamp="20200310 10:14:54.143" level="INFO">Clicking element 'id:button_next_step'.</msg>
+<status status="PASS" starttime="20200310 10:14:54.142" endtime="20200310 10:14:54.327"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:07.878" endtime="20200309 13:15:08.049"></status>
+<status status="PASS" starttime="20200310 10:14:54.142" endtime="20200310 10:14:54.328"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:07.823" endtime="20200309 13:15:08.050"></status>
+<status status="PASS" starttime="20200310 10:14:54.035" endtime="20200310 10:14:54.329"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20200309 13:15:10.052" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200309 13:15:08.050" endtime="20200309 13:15:10.053"></status>
+<msg timestamp="20200310 10:14:56.332" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200310 10:14:54.329" endtime="20200310 10:14:56.334"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:07.822" endtime="20200309 13:15:10.054"></status>
+<status status="PASS" starttime="20200310 10:14:54.035" endtime="20200310 10:14:56.366"></status>
 </kw>
 <kw name="Set cus_info" library="Platform_Common">
 <arguments>
@@ -679,10 +625,10 @@
 <arg>${web_PLATFORM_CUSTOMER_NUMBER}</arg>
 <arg>${cusNum}</arg>
 </arguments>
-<msg timestamp="20200309 13:15:10.069" level="INFO">Typing text 'kh002' into text field 'id:cusNum'.</msg>
-<status status="PASS" starttime="20200309 13:15:10.066" endtime="20200309 13:15:10.284"></status>
+<msg timestamp="20200310 10:14:56.384" level="INFO">Typing text 'kh002' into text field 'id:cusNum'.</msg>
+<status status="PASS" starttime="20200310 10:14:56.381" endtime="20200310 10:14:56.722"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:10.063" endtime="20200309 13:15:10.285"></status>
+<status status="PASS" starttime="20200310 10:14:56.377" endtime="20200310 10:14:56.723"></status>
 </kw>
 <kw name="Set cus_name" library="Platform_Common">
 <arguments>
@@ -694,10 +640,10 @@
 <arg>${web_PLATFORM_CUSTOMER_NAME}</arg>
 <arg>${cusName}</arg>
 </arguments>
-<msg timestamp="20200309 13:15:10.288" level="INFO">Typing text '001客户' into text field 'id:cusName'.</msg>
-<status status="PASS" starttime="20200309 13:15:10.287" endtime="20200309 13:15:10.466"></status>
+<msg timestamp="20200310 10:14:56.725" level="INFO">Typing text '001客户' into text field 'id:cusName'.</msg>
+<status status="PASS" starttime="20200310 10:14:56.725" endtime="20200310 10:14:56.941"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:10.286" endtime="20200309 13:15:10.467"></status>
+<status status="PASS" starttime="20200310 10:14:56.723" endtime="20200310 10:14:56.941"></status>
 </kw>
 <kw name="Set cus_cuNature" library="Platform_Common">
 <arguments>
@@ -709,10 +655,10 @@
 <arg>${web_PLATFORM_CUSTOMER_CUNATURE}</arg>
 <arg>${cuNature}</arg>
 </arguments>
-<msg timestamp="20200309 13:15:10.469" level="INFO">Selecting options from selection list 'id:cuNature' by index 1.</msg>
-<status status="PASS" starttime="20200309 13:15:10.468" endtime="20200309 13:15:10.605"></status>
+<msg timestamp="20200310 10:14:56.946" level="INFO">Selecting options from selection list 'id:cuNature' by index 1.</msg>
+<status status="PASS" starttime="20200310 10:14:56.945" endtime="20200310 10:14:57.136"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:10.467" endtime="20200309 13:15:10.605"></status>
+<status status="PASS" starttime="20200310 10:14:56.942" endtime="20200310 10:14:57.136"></status>
 </kw>
 <kw name="Set cus_serviceStatus" library="Platform_Common">
 <arguments>
@@ -724,10 +670,10 @@
 <arg>${web_PLATFORM_CUSTOMER_SERVICESTATUS}</arg>
 <arg>${serviceStatus}</arg>
 </arguments>
-<msg timestamp="20200309 13:15:10.607" level="INFO">Selecting options from selection list 'id:serviceStatus' by index 2.</msg>
-<status status="PASS" starttime="20200309 13:15:10.607" endtime="20200309 13:15:10.755"></status>
+<msg timestamp="20200310 10:14:57.139" level="INFO">Selecting options from selection list 'id:serviceStatus' by index 2.</msg>
+<status status="PASS" starttime="20200310 10:14:57.138" endtime="20200310 10:14:57.396"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:10.606" endtime="20200309 13:15:10.755"></status>
+<status status="PASS" starttime="20200310 10:14:57.137" endtime="20200310 10:14:57.396"></status>
 </kw>
 <kw name="Set cus_correctionFactor" library="Platform_Common">
 <arguments>
@@ -739,10 +685,10 @@
 <arg>${web_PLATFORM_CUSTOMER_CORRECTIONFACTOR}</arg>
 <arg>${correctionFactor}</arg>
 </arguments>
-<msg timestamp="20200309 13:15:10.758" level="INFO">Typing text '2.6' into text field 'id:correctionFactor'.</msg>
-<status status="PASS" starttime="20200309 13:15:10.757" endtime="20200309 13:15:10.894"></status>
+<msg timestamp="20200310 10:14:57.399" level="INFO">Typing text '2.6' into text field 'id:correctionFactor'.</msg>
+<status status="PASS" starttime="20200310 10:14:57.398" endtime="20200310 10:14:57.601"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:10.756" endtime="20200309 13:15:10.894"></status>
+<status status="PASS" starttime="20200310 10:14:57.397" endtime="20200310 10:14:57.602"></status>
 </kw>
 <kw name="Set cus_floorSpace" library="Platform_Common">
 <arguments>
@@ -754,10 +700,10 @@
 <arg>${web_PLATFORM_CUSTOMER_FLOORSPACE}</arg>
 <arg>${floorSpace}</arg>
 </arguments>
-<msg timestamp="20200309 13:15:10.897" level="INFO">Typing text '450' into text field 'id:floorSpace'.</msg>
-<status status="PASS" starttime="20200309 13:15:10.896" endtime="20200309 13:15:11.050"></status>
+<msg timestamp="20200310 10:14:57.604" level="INFO">Typing text '450' into text field 'id:floorSpace'.</msg>
+<status status="PASS" starttime="20200310 10:14:57.603" endtime="20200310 10:14:57.803"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:10.895" endtime="20200309 13:15:11.050"></status>
+<status status="PASS" starttime="20200310 10:14:57.602" endtime="20200310 10:14:57.804"></status>
 </kw>
 <kw name="Set cus_serviceFloorArea" library="Platform_Common">
 <arguments>
@@ -769,10 +715,10 @@
 <arg>${web_PLATFORM_CUSTOMER_SERVICEFLOORAREA}</arg>
 <arg>${serviceFloorArea}</arg>
 </arguments>
-<msg timestamp="20200309 13:15:11.055" level="INFO">Typing text '210' into text field 'id:serviceFloorArea'.</msg>
-<status status="PASS" starttime="20200309 13:15:11.051" endtime="20200309 13:15:11.202"></status>
+<msg timestamp="20200310 10:14:57.806" level="INFO">Typing text '210' into text field 'id:serviceFloorArea'.</msg>
+<status status="PASS" starttime="20200310 10:14:57.805" endtime="20200310 10:14:58.028"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:11.050" endtime="20200309 13:15:11.202"></status>
+<status status="PASS" starttime="20200310 10:14:57.804" endtime="20200310 10:14:58.028"></status>
 </kw>
 <kw name="Set cus_population" library="Platform_Common">
 <arguments>
@@ -784,10 +730,10 @@
 <arg>${web_PLATFORM_CUSTOMER_POPULATION}</arg>
 <arg>${population}</arg>
 </arguments>
-<msg timestamp="20200309 13:15:11.204" level="INFO">Typing text '5' into text field 'id:population'.</msg>
-<status status="PASS" starttime="20200309 13:15:11.203" endtime="20200309 13:15:11.288"></status>
+<msg timestamp="20200310 10:14:58.031" level="INFO">Typing text '5' into text field 'id:population'.</msg>
+<status status="PASS" starttime="20200310 10:14:58.030" endtime="20200310 10:14:58.220"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:11.202" endtime="20200309 13:15:11.288"></status>
+<status status="PASS" starttime="20200310 10:14:58.029" endtime="20200310 10:14:58.221"></status>
 </kw>
 <kw name="Set cus_tel" library="Platform_Common">
 <arguments>
@@ -799,10 +745,10 @@
 <arg>${web_PLATFORM_CUSTOMER_TEL}</arg>
 <arg>${tel}</arg>
 </arguments>
-<msg timestamp="20200309 13:15:11.291" level="INFO">Typing text '15165021524' into text field 'id:tel'.</msg>
-<status status="PASS" starttime="20200309 13:15:11.290" endtime="20200309 13:15:11.636"></status>
+<msg timestamp="20200310 10:14:58.228" level="INFO">Typing text '15165021524' into text field 'id:tel'.</msg>
+<status status="PASS" starttime="20200310 10:14:58.225" endtime="20200310 10:14:58.585"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:11.289" endtime="20200309 13:15:11.636"></status>
+<status status="PASS" starttime="20200310 10:14:58.221" endtime="20200310 10:14:58.586"></status>
 </kw>
 <kw name="Set cus_email" library="Platform_Common">
 <arguments>
@@ -814,10 +760,10 @@
 <arg>${web_PLATFORM_CUSTOMER_EMAIL}</arg>
 <arg>${email}</arg>
 </arguments>
-<msg timestamp="20200309 13:15:11.640" level="INFO">Typing text '15241@125.com' into text field 'id:email'.</msg>
-<status status="PASS" starttime="20200309 13:15:11.640" endtime="20200309 13:15:12.026"></status>
+<msg timestamp="20200310 10:14:58.588" level="INFO">Typing text '15241@125.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20200310 10:14:58.587" endtime="20200310 10:14:59.037"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:11.637" endtime="20200309 13:15:12.026"></status>
+<status status="PASS" starttime="20200310 10:14:58.586" endtime="20200310 10:14:59.038"></status>
 </kw>
 <kw name="Set cus_remark" library="Platform_Common">
 <arguments>
@@ -829,20 +775,20 @@
 <arg>${web_PLATFORM_CUSTOMER_REMARK}</arg>
 <arg>${remark}</arg>
 </arguments>
-<msg timestamp="20200309 13:15:12.028" level="INFO">Typing text 'test' into text field 'id:remark'.</msg>
-<status status="PASS" starttime="20200309 13:15:12.028" endtime="20200309 13:15:12.174"></status>
+<msg timestamp="20200310 10:14:59.040" level="INFO">Typing text 'test' into text field 'id:remark'.</msg>
+<status status="PASS" starttime="20200310 10:14:59.039" endtime="20200310 10:14:59.246"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:12.027" endtime="20200309 13:15:12.175"></status>
+<status status="PASS" starttime="20200310 10:14:59.038" endtime="20200310 10:14:59.248"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20200309 13:15:14.176" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200309 13:15:12.175" endtime="20200309 13:15:14.176"></status>
+<msg timestamp="20200310 10:15:01.250" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200310 10:14:59.249" endtime="20200310 10:15:01.252"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:10.055" endtime="20200309 13:15:14.177"></status>
+<status status="PASS" starttime="20200310 10:14:56.367" endtime="20200310 10:15:01.253"></status>
 </kw>
 <kw name="Click button orgComplete" library="Platform_OrganizationPage">
 <kw name="Click element when is enabled" library="WebShare">
@@ -862,9 +808,9 @@
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<status status="PASS" starttime="20200309 13:15:14.181" endtime="20200309 13:15:14.224"></status>
+<status status="PASS" starttime="20200310 10:15:01.266" endtime="20200310 10:15:01.371"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:14.180" endtime="20200309 13:15:14.224"></status>
+<status status="PASS" starttime="20200310 10:15:01.262" endtime="20200310 10:15:01.371"></status>
 </kw>
 <kw name="Wait Until Keyword Succeeds" library="BuiltIn">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -879,9 +825,9 @@
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<status status="PASS" starttime="20200309 13:15:14.227" endtime="20200309 13:15:14.259"></status>
+<status status="PASS" starttime="20200310 10:15:01.374" endtime="20200310 10:15:01.418"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:14.225" endtime="20200309 13:15:14.259"></status>
+<status status="PASS" starttime="20200310 10:15:01.372" endtime="20200310 10:15:01.418"></status>
 </kw>
 <kw name="Wait Until Keyword Succeeds" library="BuiltIn">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -896,27 +842,27 @@
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200309 13:15:14.261" level="INFO">Clicking element 'id:button_accomplish'.</msg>
-<status status="PASS" starttime="20200309 13:15:14.261" endtime="20200309 13:15:14.408"></status>
+<msg timestamp="20200310 10:15:01.457" level="INFO">Clicking element 'id:button_accomplish'.</msg>
+<status status="PASS" starttime="20200310 10:15:01.456" endtime="20200310 10:15:01.624"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:14.259" endtime="20200309 13:15:14.408"></status>
+<status status="PASS" starttime="20200310 10:15:01.419" endtime="20200310 10:15:01.624"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:14.178" endtime="20200309 13:15:14.408"></status>
+<status status="PASS" starttime="20200310 10:15:01.258" endtime="20200310 10:15:01.624"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20200309 13:15:16.409" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200309 13:15:14.409" endtime="20200309 13:15:16.411"></status>
+<msg timestamp="20200310 10:15:03.625" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200310 10:15:01.625" endtime="20200310 10:15:03.625"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:14.177" endtime="20200309 13:15:16.412"></status>
+<status status="PASS" starttime="20200310 10:15:01.255" endtime="20200310 10:15:03.626"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:01.864" endtime="20200309 13:15:16.413"></status>
+<status status="PASS" starttime="20200310 10:14:48.144" endtime="20200310 10:15:03.626"></status>
 </kw>
 <kw name="Then add success">
-<kw name="Add cuatomer success" library="Platform_Common">
+<kw name="Add customer success" library="Platform_CustomerPage">
 <arguments>
 <arg>客户@{list}[0]添加成功！</arg>
 </arguments>
@@ -926,20 +872,20 @@
 <arg>${text}</arg>
 <arg>${loglevel}</arg>
 </arguments>
-<msg timestamp="20200309 13:15:16.488" level="INFO">Current page contains text '客户kh002添加成功！'.</msg>
-<status status="PASS" starttime="20200309 13:15:16.425" endtime="20200309 13:15:16.489"></status>
+<msg timestamp="20200310 10:15:03.702" level="INFO">Current page contains text '客户kh002添加成功！'.</msg>
+<status status="PASS" starttime="20200310 10:15:03.632" endtime="20200310 10:15:03.703"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:16.420" endtime="20200309 13:15:16.489"></status>
+<status status="PASS" starttime="20200310 10:15:03.629" endtime="20200310 10:15:03.703"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20200309 13:15:18.491" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200309 13:15:16.490" endtime="20200309 13:15:18.493"></status>
+<msg timestamp="20200310 10:15:05.705" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200310 10:15:03.704" endtime="20200310 10:15:05.707"></status>
 </kw>
-<kw name="Add cuatomer success" library="Platform_Common">
+<kw name="Add customer success" library="Platform_CustomerPage">
 <arguments>
 <arg>${org_name}</arg>
 </arguments>
@@ -949,20 +895,441 @@
 <arg>${text}</arg>
 <arg>${loglevel}</arg>
 </arguments>
-<msg timestamp="20200309 13:15:18.568" level="INFO">Current page contains text 'zd001'.</msg>
-<status status="PASS" starttime="20200309 13:15:18.497" endtime="20200309 13:15:18.569"></status>
+<msg timestamp="20200310 10:15:05.788" level="INFO">Current page contains text 'zd001'.</msg>
+<status status="PASS" starttime="20200310 10:15:05.712" endtime="20200310 10:15:05.788"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:18.493" endtime="20200309 13:15:18.570"></status>
+<status status="PASS" starttime="20200310 10:15:05.709" endtime="20200310 10:15:05.789"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:15:16.417" endtime="20200309 13:15:18.570"></status>
+<status status="PASS" starttime="20200310 10:15:03.627" endtime="20200310 10:15:05.789"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:14:59.672" endtime="20200309 13:15:18.572" critical="yes"></status>
+<kw name="deleted organization" type="teardown">
+<kw name="wait for loading page" library="Platform_Common">
+<doc>Wait for dissapearing all loading page icons</doc>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>20ms</arg>
+<arg>reason=wait for load loading indicator</arg>
+</arguments>
+<msg timestamp="20200310 10:15:05.812" level="INFO">Slept 20 milliseconds</msg>
+<msg timestamp="20200310 10:15:05.812" level="INFO">wait for load loading indicator</msg>
+<status status="PASS" starttime="20200310 10:15:05.791" endtime="20200310 10:15:05.812"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>${WEB_PLATFORM_SELENIUM_TIMEOUT}</arg>
+<arg>20 ms</arg>
+<arg>Page Should Not Contain element</arg>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_SELENIUM_TIMEOUT}</arg>
+<arg>20 ms</arg>
+<arg>Page Should Not Contain element</arg>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20200310 10:15:06.027" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:15:05.815" endtime="20200310 10:15:06.028"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20200310 10:15:06.281" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:15:06.048" endtime="20200310 10:15:06.282"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20200310 10:15:06.505" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:15:06.302" endtime="20200310 10:15:06.506"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20200310 10:15:06.720" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:15:06.526" endtime="20200310 10:15:06.720"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20200310 10:15:07.006" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:15:06.740" endtime="20200310 10:15:07.006"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20200310 10:15:07.226" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:15:07.026" endtime="20200310 10:15:07.226"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20200310 10:15:07.427" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:15:07.246" endtime="20200310 10:15:07.427"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20200310 10:15:07.690" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:15:07.447" endtime="20200310 10:15:07.690"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20200310 10:15:07.919" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:15:07.710" endtime="20200310 10:15:07.920"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20200310 10:15:08.136" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:15:07.940" endtime="20200310 10:15:08.137"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20200310 10:15:08.359" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:15:08.157" endtime="20200310 10:15:08.360"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20200310 10:15:08.638" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:15:08.380" endtime="20200310 10:15:08.638"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${WEB_PLATFORM_LOADING_PAGE_ICON}</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20200310 10:15:08.827" level="FAIL">Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:15:08.658" endtime="20200310 10:15:08.828"></status>
+</kw>
+<msg timestamp="20200310 10:15:08.828" level="FAIL">Keyword 'Page Should Not Contain element' failed after retrying for 3 seconds. The last error was: Page should not have contained element '//img[@id="organizationLoader"]'.</msg>
+<status status="FAIL" starttime="20200310 10:15:05.814" endtime="20200310 10:15:08.828"></status>
+</kw>
+<status status="PASS" starttime="20200310 10:15:05.813" endtime="20200310 10:15:08.829"></status>
+</kw>
+<status status="PASS" starttime="20200310 10:15:05.790" endtime="20200310 10:15:08.829"></status>
+</kw>
+<kw name="Select list one row" library="Platform_Common">
+<arguments>
+<arg>jqg_organizationGrid_0</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[contains(@id,"${row_id}")]</arg>
+</arguments>
+<msg timestamp="20200310 10:15:08.830" level="INFO">Clicking element '//input[contains(@id,"jqg_organizationGrid_0")]'.</msg>
+<status status="PASS" starttime="20200310 10:15:08.830" endtime="20200310 10:15:08.952"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200310 10:15:10.953" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200310 10:15:08.952" endtime="20200310 10:15:10.954"></status>
+</kw>
+<status status="PASS" starttime="20200310 10:15:08.829" endtime="20200310 10:15:10.955"></status>
+</kw>
+<kw name="Click bottom button deleted" library="Platform_OrganizationPage">
+<kw name="Get bottom button" library="Platform_Common">
+<arguments>
+<arg>organizationPager_left</arg>
+<arg>删除</arg>
+</arguments>
+<assign>
+<var>${add_button_ele}</var>
+</assign>
+<msg timestamp="20200310 10:15:10.966" level="INFO">${add_button_ele} = //td[@id="organizationPager_left"]/table/tbody/tr/td[@title="删除"]</msg>
+<status status="PASS" starttime="20200310 10:15:10.959" endtime="20200310 10:15:10.966"></status>
+</kw>
+<kw name="Click element when is enabled" library="WebShare">
+<arguments>
+<arg>${add_button_ele}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>12</arg>
+<arg>100ms</arg>
+<arg>Wait until element is enabled</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200310 10:15:10.975" endtime="20200310 10:15:11.061"></status>
+</kw>
+<status status="PASS" starttime="20200310 10:15:10.971" endtime="20200310 10:15:11.061"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>12</arg>
+<arg>100ms</arg>
+<arg>Wait until element is visible</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200310 10:15:11.063" endtime="20200310 10:15:11.124"></status>
+</kw>
+<status status="PASS" starttime="20200310 10:15:11.062" endtime="20200310 10:15:11.125"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>20</arg>
+<arg>300ms</arg>
+<arg>click element</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200310 10:15:11.128" level="INFO">Clicking element '//td[@id="organizationPager_left"]/table/tbody/tr/td[@title="删除"]'.</msg>
+<status status="PASS" starttime="20200310 10:15:11.126" endtime="20200310 10:15:11.274"></status>
+</kw>
+<status status="PASS" starttime="20200310 10:15:11.125" endtime="20200310 10:15:11.275"></status>
+</kw>
+<status status="PASS" starttime="20200310 10:15:10.968" endtime="20200310 10:15:11.275"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200310 10:15:13.276" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200310 10:15:11.275" endtime="20200310 10:15:13.277"></status>
+</kw>
+<status status="PASS" starttime="20200310 10:15:10.957" endtime="20200310 10:15:13.279"></status>
+</kw>
+<kw name="Set deletde reason" library="Platform_Common">
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_DEMOSELECT}</arg>
+<arg>${demoSelect}</arg>
+</arguments>
+<msg timestamp="20200310 10:15:13.286" level="INFO">Selecting options from selection list 'id:demoSelect' by index 1.</msg>
+<status status="PASS" starttime="20200310 10:15:13.283" endtime="20200310 10:15:13.528"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200310 10:15:15.529" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200310 10:15:13.529" endtime="20200310 10:15:15.529"></status>
+</kw>
+<status status="PASS" starttime="20200310 10:15:13.280" endtime="20200310 10:15:15.530"></status>
+</kw>
+<kw name="Click delete confirm button" library="Platform_Common">
+<kw name="Click element when is enabled" library="WebShare">
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_REMOVEBUTTONCONFIRM}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>12</arg>
+<arg>100ms</arg>
+<arg>Wait until element is enabled</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200310 10:15:15.535" endtime="20200310 10:15:15.606"></status>
+</kw>
+<status status="PASS" starttime="20200310 10:15:15.533" endtime="20200310 10:15:15.606"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>12</arg>
+<arg>100ms</arg>
+<arg>Wait until element is visible</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200310 10:15:15.608" endtime="20200310 10:15:15.643"></status>
+</kw>
+<status status="PASS" starttime="20200310 10:15:15.607" endtime="20200310 10:15:15.643"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>20</arg>
+<arg>300ms</arg>
+<arg>click element</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200310 10:15:15.645" level="INFO">Clicking element 'id:remove_button_confirm'.</msg>
+<status status="PASS" starttime="20200310 10:15:15.644" endtime="20200310 10:15:15.762"></status>
+</kw>
+<status status="PASS" starttime="20200310 10:15:15.643" endtime="20200310 10:15:15.763"></status>
+</kw>
+<status status="PASS" starttime="20200310 10:15:15.531" endtime="20200310 10:15:15.763"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200310 10:15:17.765" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200310 10:15:15.764" endtime="20200310 10:15:17.766"></status>
+</kw>
+<status status="PASS" starttime="20200310 10:15:15.530" endtime="20200310 10:15:17.767"></status>
+</kw>
+<kw name="Click next delete confirm button" library="Platform_OrganizationPage">
+<kw name="Click element when is enabled" library="WebShare">
+<arguments>
+<arg>${web_PLATFORM_CUSTOMER_DELETEBUTTONCONFIRM}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>12</arg>
+<arg>100ms</arg>
+<arg>Wait until element is enabled</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200310 10:15:17.783" endtime="20200310 10:15:17.857"></status>
+</kw>
+<status status="PASS" starttime="20200310 10:15:17.779" endtime="20200310 10:15:17.857"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>12</arg>
+<arg>100ms</arg>
+<arg>Wait until element is visible</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200310 10:15:17.859" endtime="20200310 10:15:17.904"></status>
+</kw>
+<status status="PASS" starttime="20200310 10:15:17.858" endtime="20200310 10:15:17.904"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>20</arg>
+<arg>300ms</arg>
+<arg>click element</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200310 10:15:17.907" level="INFO">Clicking element 'id:delete_button_confirm'.</msg>
+<status status="PASS" starttime="20200310 10:15:17.906" endtime="20200310 10:15:18.044"></status>
+</kw>
+<status status="PASS" starttime="20200310 10:15:17.905" endtime="20200310 10:15:18.044"></status>
+</kw>
+<status status="PASS" starttime="20200310 10:15:17.774" endtime="20200310 10:15:18.046"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200310 10:15:20.048" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200310 10:15:18.047" endtime="20200310 10:15:20.049"></status>
+</kw>
+<status status="PASS" starttime="20200310 10:15:17.769" endtime="20200310 10:15:20.050"></status>
+</kw>
+<status status="PASS" starttime="20200310 10:15:05.790" endtime="20200310 10:15:20.050"></status>
+</kw>
+<status status="PASS" starttime="20200310 10:14:46.072" endtime="20200310 10:15:20.052" critical="yes"></status>
 </test>
 <kw name="Close Browser" library="SeleniumLibrary" type="teardown">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20200309 13:15:18.597" endtime="20200309 13:15:20.976"></status>
+<status status="PASS" starttime="20200310 10:15:20.072" endtime="20200310 10:15:22.494"></status>
 </kw>
-<status status="PASS" starttime="20200309 13:14:27.472" endtime="20200309 13:15:20.977"></status>
+<status status="PASS" starttime="20200310 10:14:13.669" endtime="20200310 10:15:22.494"></status>
 </suite>
 <statistics>
 <total>

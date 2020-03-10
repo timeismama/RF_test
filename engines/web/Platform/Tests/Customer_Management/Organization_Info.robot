@@ -46,9 +46,9 @@ add organization
     Platform_OrganizationPage.Click button orgComplete
 
 add success
-    Add cuatomer success  客户@{list}[0]添加成功！
+    Platform_CustomerPage.Add customer success  客户@{list}[0]添加成功！
     sleep  2s
-    Add cuatomer success  ${org_name}
+    Platform_CustomerPage.Add customer success  ${org_name}
 
 #    编辑组织信息
 edit organization

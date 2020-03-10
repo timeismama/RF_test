@@ -2,7 +2,7 @@
 Resource    ../PlatformShare.robot
 
 *** Variables ***
-${WEB_PLATFORM_URL}   http://demo.metering-cloud.com/platform252
+${WEB_PLATFORM_URL}   http://demo.metering-cloud.com/test
 ${WEB_PLATFORM_USER_NAME}    admin
 ${WEB_PLATFORM_USER_PASSWORD}    radio123
 ${WEB_PLATFORM_SELENIUM_TIMEOUT}    3s
@@ -130,11 +130,6 @@ Set cus_info
     Set cus_email  ${cus_email}
     Set cus_remark  ${cus_remark}
     sleep  2s
-
-#   验证信息是否追加成功
-Add cuatomer success
-    [Arguments]    ${text}    ${loglevel}=INFO
-    Page Should Contain    ${text}    ${loglevel}
 
 #    选中列表中某一行
 Select list one row

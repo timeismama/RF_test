@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc4ae98d-8d55-4b50-b356-99c92f54977e" name="Default Changelist" comment="仪表信息-增删改查功能，组织添加功能完善">
-      <change afterPath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_Device.robot" afterDir="false" />
+    <list default="true" id="fc4ae98d-8d55-4b50-b356-99c92f54977e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engines/web/Platform/PlatformShare.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/PlatformShare.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_MeterPage.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_OrganizationPage.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_OrganizationPage.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_TopMenu.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_TopMenu.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_CustomerPage.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_CustomerPage.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/web/Platform/Resources/Platform_Common.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Resources/Platform_Common.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/web/Platform/Results/junit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Results/junit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/web/Platform/Results/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Results/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/web/Platform/Results/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Results/output.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/web/Platform/Results/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Results/report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/web/Platform/Tests/Customer_Management/Organization_Info.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Tests/Customer_Management/Organization_Info.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engines/web/Platform/Tests/Device_Management/Meter_Info.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Tests/Device_Management/Meter_Info.robot" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +78,21 @@
       <option name="project" value="LOCAL" />
       <updated>1566799654733</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="仪表信息-增删改查功能，组织添加功能完善">
+      <created>1583731176283</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1583731176283</updated>
+    </task>
+    <task id="LOCAL-00005" summary="组织添加追加清除功能">
+      <created>1583742622419</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1583742622420</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -102,6 +111,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="组织信息界面-增删改相关" />
     <MESSAGE value="1、客户信息界面-增删改查、关联设备、取消关联设备功能的实现；2、组织跟客户共用内容提取共同" />
-    <option name="LAST_COMMIT_MESSAGE" value="1、客户信息界面-增删改查、关联设备、取消关联设备功能的实现；2、组织跟客户共用内容提取共同" />
+    <MESSAGE value="仪表信息-增删改查功能，组织添加功能完善" />
+    <MESSAGE value="组织添加追加清除功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="组织添加追加清除功能" />
   </component>
 </project>
