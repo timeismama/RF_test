@@ -82,4 +82,7 @@ Click next delete confirm button
     click element when is enabled  ${web_PLATFORM_CUSTOMER_DELETEBUTTONCONFIRM}
     sleep  2s
 
-#   追加判断
+#   验证信息是否追加成功
+Add organization success
+    [Arguments]    ${text}    ${loglevel}=INFO
+    Page Should Contain    ${text}    ${loglevel}

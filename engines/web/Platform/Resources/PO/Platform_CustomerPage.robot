@@ -91,7 +91,23 @@ Click button cancel relevance
     click element when is enabled  ${web_PLATFORM_CUSTOMER_BUTTONCANCELRELEVANCE}
     sleep  2s
 
-#   验证信息是否追加成功
+#   验证客户界面对应客户信息是否追加成功
 Add customer success
     [Arguments]    ${text}    ${loglevel}=INFO
     Page Should Contain    ${text}    ${loglevel}
+
+#    验证组织界面追加客户是否成功
+Add customer success from organization
+    [Arguments]  ${orgName}  ${text}
+    Platform_TopMenu.Get into customer page
+    sleep  2s
+    Platform_Common.Select unGroup left tree button  ${orgName}
+    Add customer success  ${text}
+    sleep  2s
+
+#    删除客户信息
+Delete customerInfo
+    Select list one row  jqg_customerGrid_0
+    Platform_CustomerPage.Click bottom button deleted
+    Set deletde reason  3
+    Click delete confirm button

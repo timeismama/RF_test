@@ -42,7 +42,7 @@ User in meter management page
 
 click ungroup tree
     wait for loading page
-    Platform_Common.Select unGroup left tree button
+    Platform_Common.Select unGroup left tree button  Î´·Ö×é
     sleep  2s
 
 add meter

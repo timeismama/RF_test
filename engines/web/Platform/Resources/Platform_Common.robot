@@ -51,7 +51,8 @@ wait for loading page
     Run Keyword And Ignore Error    Wait Until Keyword Succeeds    ${WEB_PLATFORM_SELENIUM_TIMEOUT}    20 ms    Page Should Not Contain element    ${WEB_PLATFORM_LOADING_PAGE_ICON}    loglevel=NONE
 
 Select unGroup left tree button
-    click element when is enabled    //span[contains(text(),'未分组')]
+    [Arguments]  ${orgName}
+    click element when is enabled    //span[contains(text(),"${orgName}")]
 
 
 #   列表中的添加、编辑、删除、全部删除按钮

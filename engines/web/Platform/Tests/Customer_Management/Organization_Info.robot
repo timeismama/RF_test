@@ -15,17 +15,17 @@ ${index}  12
 IP-xxx : Add organization
 #   添加组织
     Given User is in organization info page
-    When add organization
-    Then add success
-    [Teardown]  deleted organization
+    When Add organization
+    Then Add organization and customer success
+    [Teardown]  Deleted organization and customer
 
 IP-edit: edit organization
 #    编辑组织
-    Then edit organization
+    Then Edit organization
 
 IP-deleted: deleted organization
 #    删除组织
-    Then deleted organization
+    Then Deleted organization and customer
 
 
 *** Keywords ***
@@ -33,7 +33,7 @@ User is in organization info page
     sleep  2s
     Platform_TopMenu.Get into organization page
 
-add organization
+Add organization
     wait for loading page
     Platform_OrganizationPage.Click bottom button add
 #    向导第一步
@@ -45,13 +45,17 @@ add organization
     Set cus_info  @{list}[0]  @{list}[1]  @{list}[2]  @{list}[3]  @{list}[4]  @{list}[5]  @{list}[6]  @{list}[7]  @{list}[8]  @{list}[9]  @{list}[10]
     Platform_OrganizationPage.Click button orgComplete
 
-add success
+#   验证组织跟客户是否追加成功
+Add organization and customer success
     Platform_CustomerPage.Add customer success  客户@{list}[0]添加成功！
     sleep  2s
-    Platform_CustomerPage.Add customer success  ${org_name}
+    Platform_OrganizationPage.Add organization success  ${org_name}
+    sleep  2s
+    Platform_CustomerPage.Add customer success from organization  ${org_name}  @{list}[0]
+    Platform_TopMenu.Get into organization page
 
 #    编辑组织信息
-edit organization
+Edit organization
     wait for loading page
 #    向导第一步
 #    选中某一行
@@ -67,8 +71,8 @@ edit organization
     Platform_OrganizationPage.Click button orgComplete
 
 #    删除组织
-deleted organization
-    wait for loading page
+Deleted organization and customer
+#    wait for loading page
 #    选中某一行
     Select list one row  jqg_organizationGrid_0
     Platform_OrganizationPage.Click bottom button deleted

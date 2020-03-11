@@ -4,12 +4,14 @@
     <list default="true" id="fc4ae98d-8d55-4b50-b356-99c92f54977e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_CustomerPage.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_CustomerPage.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_OrganizationPage.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_OrganizationPage.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/web/Platform/Resources/Platform_Common.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Resources/Platform_Common.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/web/Platform/Results/junit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Results/junit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/web/Platform/Results/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Results/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/web/Platform/Results/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Results/output.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/web/Platform/Results/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Results/report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/web/Platform/Tests/Customer_Management/Organization_Info.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Tests/Customer_Management/Organization_Info.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/web/Platform/Tests/Device_Management/Meter_Info.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Tests/Device_Management/Meter_Info.robot" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583742622420</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="共同方法提取修改">
+      <created>1583818189392</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1583818189392</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,6 +122,7 @@
     <MESSAGE value="1、客户信息界面-增删改查、关联设备、取消关联设备功能的实现；2、组织跟客户共用内容提取共同" />
     <MESSAGE value="仪表信息-增删改查功能，组织添加功能完善" />
     <MESSAGE value="组织添加追加清除功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="组织添加追加清除功能" />
+    <MESSAGE value="共同方法提取修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="共同方法提取修改" />
   </component>
 </project>
