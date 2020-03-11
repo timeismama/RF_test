@@ -2,7 +2,7 @@
 Resource    ../PlatformShare.robot
 
 *** Variables ***
-${WEB_PLATFORM_URL}   http://demo.metering-cloud.com/test
+${WEB_PLATFORM_URL}   http://localhost:8080/platform
 ${WEB_PLATFORM_USER_NAME}    admin
 ${WEB_PLATFORM_USER_PASSWORD}    radio123
 ${WEB_PLATFORM_SELENIUM_TIMEOUT}    3s
@@ -50,6 +50,7 @@ wait for loading page
     Sleep    20ms    reason=wait for load loading indicator
     Run Keyword And Ignore Error    Wait Until Keyword Succeeds    ${WEB_PLATFORM_SELENIUM_TIMEOUT}    20 ms    Page Should Not Contain element    ${WEB_PLATFORM_LOADING_PAGE_ICON}    loglevel=NONE
 
+#   选择左侧树中的组织
 Select unGroup left tree button
     [Arguments]  ${orgName}
     click element when is enabled    //span[contains(text(),"${orgName}")]
