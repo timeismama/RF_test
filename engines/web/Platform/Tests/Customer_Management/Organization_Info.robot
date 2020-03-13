@@ -25,6 +25,9 @@ ${org_rootNode}  总公司
 ${org_roomCount}  10
 ${org_errorInfo_null}  *组织名称不能为空
 ${org_errorInfo_exist}  组织名称已经存在
+${org_list_one_row}  jqg_organizationGrid_0
+${org_delete_reason}  1
+${org_delete_new_reason}  组织编写错误
 
 *** Test Cases ***
 IP-6014: orgName is null
@@ -99,13 +102,33 @@ IP-6024: add sameName organization
     Then Platform_OrganizationPage.Add organization success  ${org_errorInfo_exist}
     [Teardown]  Close the bounced
 
-IP-edit: edit organization
-#    编辑组织
-    Then Edit organization
+IP-6030: edit same name organization
+    Given User is in organization info page
+    When Edit same name organization
+    Then Platform_OrganizationPage.Add organization success  ${org_errorInfo_exist}
 
-IP-deleted: deleted organization
-#    删除组织
-    Then Deleted organization and customer
+IP-6031: edit upper organization
+    Given User is in organization info page
+    When Edit upper organization
+    Then Edit organization success  ${org_communityName}
+
+IP-6032: edit organization name
+    Given User is in organization info page
+    When Edit organization name
+    Then Edit organization success  121小区
+    [Teardown]  Deleted child node organization
+
+IP-6033: edit organization otherInfo
+    Given User is in organization info page
+    When Edit organization otherInfo
+    Then Edit organization success  ${org_streetName}
+    [Teardown]  Deleted child node organization
+#
+IP-6034: edit organization and customer
+    Given User is in organization info page
+    When Edit organization and customer
+    Then Add organization and customer success  ${org_areaName}  @{list}[0]
+    [Teardown]  Deleted organization and customer
 
 *** Keywords ***
 #   进入到组织信息界面
@@ -322,5 +345,74 @@ Deleted organization and customer
     wait for loading page
     Deleted current page organization
     Platform_OrganizationPage.Click next delete confirm button
+
+#    编辑组织重复的组织名称
+Edit same name organization
+    Add community organization in area
+    Select unGroup left tree button  ${org_areaName}
+    Platform_OrganizationPage.Click bottom button add
+    Platform_OrganizationPage.Set org_name  测试小区2
+    Platform_OrganizationPage.Click button orgComplete
+    wait for loading page
+    Select list one row  ${org_list_one_row}
+    Platform_OrganizationPage.Click bottom button edit
+    Click warm delDialog_confirm
+    Platform_OrganizationPage.Set org_name  ${org_communityName}
+    Platform_OrganizationPage.Click button orgComplete
+
+#   修改上层组织
+Edit upper organization
+    Add community organization in area
+    Select unGroup left tree button  ${org_areaName}
+    wait for loading page
+    Select list one row  ${org_list_one_row}
+    Platform_OrganizationPage.Click bottom button edit
+    Click warm delDialog_confirm
+    Platform_OrganizationPage.Set org_ztree  orgTableEditOrgTree_1_a
+    Platform_OrganizationPage.Click button orgComplete
+
+#    修改组织名称
+Edit organization name
+    Add community organization in area
+    Select unGroup left tree button  ${org_areaName}
+    wait for loading page
+    Select list one row  ${org_list_one_row}
+    Platform_OrganizationPage.Click bottom button edit
+    Click warm delDialog_confirm
+    Platform_OrganizationPage.Set org_name  121小区
+    Platform_OrganizationPage.Click button orgComplete
+
+#   修改其他信息
+Edit organization otherInfo
+    Add street organization in area
+    Select unGroup left tree button  ${org_areaName}
+    wait for loading page
+    Select list one row  ${org_list_one_row}
+    Platform_OrganizationPage.Click bottom button edit
+    Click warm delDialog_confirm
+    Platform_OrganizationPage.Set org_ramark  修改test
+    Platform_OrganizationPage.Click element button neat
+#    输入经纬度
+    Platform_OrganizationPage.Set org_lon_lat  ${longitude}  ${latitude}
+    Platform_OrganizationPage.Click button orgComplete
+
+#    编辑客户
+Edit organization and customer
+    Add area organization
+    wait for loading page
+    Select list one row  ${org_list_one_row}
+    Platform_OrganizationPage.Click bottom button edit
+    wait for loading page
+    Click warm delDialog_confirm
+    Platform_OrganizationPage.Click element button neat
+    Set cus_info  @{list}[0]  @{list}[1]  @{list}[2]  @{list}[3]  @{list}[4]  @{list}[5]  @{list}[6]  @{list}[7]  @{list}[8]  @{list}[9]  @{list}[10]
+    Platform_OrganizationPage.Click button orgComplete
+
+#    验证组织编辑成功
+Edit organization success
+    [Arguments]  ${org_name}
+    wait for loading page
+    Platform_OrganizationPage.Add organization success  ${org_name}
+
 
 
