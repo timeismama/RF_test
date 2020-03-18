@@ -28,6 +28,12 @@ ${org_errorInfo_exist}  组织名称已经存在
 ${org_list_one_row}  jqg_organizationGrid_0
 ${org_delete_reason}  1
 ${org_delete_new_reason}  组织编写错误
+${org_correctionFactor_success}  楼宇修正系数修改成功！
+${org_correctionFactor_error}  支持0-1之间的正浮点数
+${org_title_name}  organizationGrid_name
+${org_title_typeName}  organizationGrid_orgTypeName
+${org_customList}  自定义列表操作成功
+${org_deleteAll}  符合条件的组织信息已全部删除！
 
 *** Test Cases ***
 IP-6014: orgName is null
@@ -123,12 +129,57 @@ IP-6033: edit organization otherInfo
     When Edit organization otherInfo
     Then Edit organization success  ${org_streetName}
     [Teardown]  Deleted child node organization
-#
+
 IP-6034: edit organization and customer
     Given User is in organization info page
     When Edit organization and customer
     Then Add organization and customer success  ${org_areaName}  @{list}[0]
     [Teardown]  Deleted organization and customer
+
+IP-6036: delete no node organization
+    Given User is in organization info page
+    When Delete no node organization
+    Then Edit organization success  ${org_communityName}
+
+IP-6037: delete child nodes organization
+    Given User is in organization info page
+    When Delete child nodes organization
+    Then Edit organization success  ${org_areaName}
+
+IP-6042: deleteAll child nodes organization
+    Given User is in organization info page
+    When DeleteAll child nodes organization
+    Then Edit organization success  ${org_deleteAll}
+
+IP-6045: edit organization correctionFactor error
+    Given User is in organization info page
+    When Edit organization correctionFactor  2
+    THEN Show organization prompt information
+    [Teardown]  Deleted child node organization
+
+IP-6045: edit organization correctionFactor
+    Given User is in organization info page
+    When Edit organization correctionFactor  0.3
+    Then Edit organization success  ${org_correctionFactor_success}
+    [Teardown]  Deleted child node organization
+
+IP-6064: on the header to sort organization name
+    Given User is in organization info page
+    When On the header to sort organization name
+
+IP-6065: On the header to sort organization typeName
+    Given User is in organization info page
+    When On the header to sort organization typeName
+
+IP-2101: select organization customList
+    Given User is in organization info page
+    When Select organization customList
+    Then Edit organization success  ${org_customList}
+
+IP-2100: export organization
+    Given User is in organization info page
+    When Export organization
+
 
 *** Keywords ***
 #   进入到组织信息界面
@@ -413,6 +464,82 @@ Edit organization success
     [Arguments]  ${org_name}
     wait for loading page
     Platform_OrganizationPage.Add organization success  ${org_name}
+
+#    删除没有子节点的组织
+Delete no node organization
+    Add community organization
+    wait for loading page
+    Deleted current page organization
+
+#    删除含有子节点的组织
+Delete child nodes organization
+    Add community organization in area
+    wait for loading page
+    Deleted child node organization
+
+#    删除存在关联客户、仪表的组织
+DeleteAll child nodes organization
+    Add room organization in unit
+    wait for loading page
+    Select unGroup left tree button  ${org_communityName}
+    Platform_OrganizationPage.Click bottom button all deleted
+#    选择删除原因
+    Set deletde reason  1
+    Click delete confirm button
+    wait for loading page
+    Platform_OrganizationPage.Click next delete confirm button
+    wait for loading page
+    Platform_OrganizationPage.Click next delete confirm button
+
+#    楼宇参数设置
+Edit organization correctionFactor
+    [Arguments]   ${org_correctionFactor}
+    Add build organization in community
+    wait for loading page
+    Select list one row  ${org_list_one_row}
+    Platform_OrganizationPage.Click bottom button correctionFactor
+    Platform_OrganizationPage.Set org_correctionFactor  ${org_correctionFactor}
+    Platform_OrganizationPage.Click element button saveCorrectionFactor
+
+#   楼宇信息提示
+Show organization prompt information
+    Platform_OrganizationPage.Add organization success  ${org_correctionFactor_error}
+    Platform_OrganizationPage.Click element button cancelCorrectionFactor
+
+#   组织名称排序
+On the header to sort organization name
+    wait for loading page
+    Platform_OrganizationPage.Click on the header to sort  ${org_title_name}
+
+#    组织类型排序
+On the header to sort organization typeName
+    wait for loading page
+    Platform_OrganizationPage.Click on the header to sort  ${org_title_typeName}
+
+#    设置列
+Select organization customList
+    wait for loading page
+    Platform_OrganizationPage.Click bottom buttom customList
+    wait for loading page
+    Platform_OrganizationPage.Click bottom button replacement
+    wait for loading page
+    Platform_OrganizationPage.Click bottom buttom customList save
+    sleep  2s
+
+#    导出功能
+Export organization
+    wait for loading page
+    Platform_OrganizationPage.Click bottom button export
+    Platform_OrganizationPage.Export organizational information
+
+#    导出成功验证
+Export organizational information success
+    Run_Keyword_And_Continue_On_Failure    file_should_exist    C:\Users\Administrator\Downloads
+
+#    删除导出文件
+Delete organizational exportInformation
+    remove file  C:\Users\Administrator\Downloads
+
 
 
 

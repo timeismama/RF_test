@@ -2,7 +2,7 @@
 Resource    ../PlatformShare.robot
 
 *** Variables ***
-${WEB_PLATFORM_URL}   http://localhost:8080/platform
+${WEB_PLATFORM_URL}   http://demo.metering-cloud.com/test
 ${WEB_PLATFORM_USER_NAME}    admin
 ${WEB_PLATFORM_USER_PASSWORD}    radio123
 ${WEB_PLATFORM_SELENIUM_TIMEOUT}    3s

@@ -104,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583818189392</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="组织模块-组织编辑">
+      <created>1584065510826</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1584065510826</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,6 +133,7 @@
     <MESSAGE value="仪表信息-增删改查功能，组织添加功能完善" />
     <MESSAGE value="组织添加追加清除功能" />
     <MESSAGE value="共同方法提取修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="共同方法提取修改" />
+    <MESSAGE value="组织模块-组织编辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="组织模块-组织编辑" />
   </component>
 </project>

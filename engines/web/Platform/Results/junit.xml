@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Organization Info" tests="7" errors="0" failures="0" skip="0">
-<testcase classname="Organization Info" name="IP-6019: add street organization in area" time="38">
-</testcase>
-<testcase classname="Organization Info" name="IP-6020: add build organization in community" time="39">
-</testcase>
-<testcase classname="Organization Info" name="IP-6021: add unit organization in build" time="45">
-</testcase>
-<testcase classname="Organization Info" name="IP-6022: add room organization in unit" time="66">
-</testcase>
-<testcase classname="Organization Info" name="IP-6170: add houseNumber organization in street" time="40">
-</testcase>
-<testcase classname="Organization Info" name="IP-6171: add room organization in houseNumber" time="46">
-</testcase>
-<testcase classname="Organization Info" name="IP-6024: add sameName organization" time="24">
+<testsuite name="Organization Info" tests="1" errors="0" failures="0" skip="0">
+<testcase classname="Organization Info" name="IP-6037: delete child nodes organization" time="34">
 </testcase>
 </testsuite>
