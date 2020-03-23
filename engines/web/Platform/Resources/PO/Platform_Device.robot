@@ -178,3 +178,8 @@ Set meter_infor
 Click meter button connect_concentrator
     click element when is enabled  ${web_PLATFORM_METER_TOCONNECTCONCENTRATOR}
     sleep  2s
+
+#    仪表添加成功
+Add meter success
+    [Arguments]    ${text}    ${loglevel}=INFO
+    Page Should Contain    ${text}    ${loglevel}

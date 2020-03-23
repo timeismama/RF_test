@@ -22,6 +22,10 @@ ${web_PLATFORM_CUSTOMER_POPULATION}  id:population
 ${web_PLATFORM_CUSTOMER_REMARK}  id:remark
 ${web_PLATFORM_CUSTOMER_ORGCOMPLETE}  id:button_accomplish
 ${web_PLATFORM_CUSTOMER_NEATBUTTON}  id:button_next_step
+${web_PLATFORM_CUSTOMER_ORGNAME}  id:orgName
+${web_PLATFORM_CUSTOMER_ADDITINALFIELDNAME}  id:additinalFieldName
+${web_PLATFORM_CUSTOMER_ADDITINALFIELDVALUE}  id:additinalFieldValue
+${web_PLATFORM_CUSTOMER_IMG_ADDITINAL_ADD}  id:img_additinal_add
 
 #   删除弹框的错误原因
 ${web_PLATFORM_CUSTOMER_DEMOSELECT}  id:demoSelect
@@ -116,6 +120,20 @@ Set cus_remark
     [Arguments]  ${remark}
     input text  ${web_PLATFORM_CUSTOMER_REMARK}  ${remark}
 
+#    附加属性名
+Set cus_additinalFieldName
+    [Arguments]  ${additinalFieldName}
+    input text  ${web_PLATFORM_CUSTOMER_ADDITINALFIELDNAME}  ${additinalFieldName}
+
+#    附加属性值
+Set cus_additinalFieldValue
+    [Arguments]  ${additinalFieldValue}
+    input text  ${web_PLATFORM_CUSTOMER_ADDITINALFIELDVALUE}  ${additinalFieldValue}
+
+#    点击添加按钮
+Click image add button
+    click image  ${web_PLATFORM_CUSTOMER_IMG_ADDITINAL_ADD}
+
 #    客户信息相关
 Set cus_info
     [Arguments]  ${cus_num}  ${cus_name}  ${cus_cuNature}  ${cus_serviceStatus}  ${cus_correctionfactor}  ${cus_floorSpace}  ${cus_serviceFloorArea}  ${cus_population}  ${cus_tel}  ${cus_email}  ${cus_remark}
@@ -130,7 +148,6 @@ Set cus_info
     Set cus_tel  ${cus_tel}
     Set cus_email  ${cus_email}
     Set cus_remark  ${cus_remark}
-    sleep  2s
 
 #    选中列表中某一行
 Select list one row
@@ -170,6 +187,8 @@ Click list is value
 #    编辑向导框中组织树的选择
 Click orgTree
     [Arguments]  ${orgTreeId}
+    click element  ${web_PLATFORM_CUSTOMER_ORGNAME}
+    sleep  2s
     click element  //a[contains(@id,"${orgTreeId}")]
 
 #    提示语中的确认按钮

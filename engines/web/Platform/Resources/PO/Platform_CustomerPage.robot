@@ -9,6 +9,9 @@ ${web_PLATFORM_CUSTOMER_CUSBUTTONNEXTSTEP}  id:cus_button_next_step
 ${web_PLATFORM_CUSTOMER_INPUTSELECT}  id:inputselect
 ${web_PLATFORM_CUSTOMER_BUTTONRELEVANCE}  id:button_relevance
 ${web_PLATFORM_CUSTOMER_BUTTONCANCELRELEVANCE}  id:button_cancel_relevance
+${web_PLATFORM_CUSTOMER_BUTTONCANCELRELEVANCE_DEVICE}  id:button_cancel_relevance_device
+${web_PLATFORM_CUSTOMER_EDITSERVICESTATUS}  id:cus_editServiceStatus
+${web_PLATFORM_CUSTOMER_SAVEEIDTSERVICESTATUS}  id:cus_saveEditServiceStatus
 
 
 *** Keywords ***
@@ -86,10 +89,16 @@ Click button relevance
     click element when is enabled  ${web_PLATFORM_CUSTOMER_BUTTONRELEVANCE}
     sleep  2s
 
-#    取消关联设备按钮
+#    取消按钮
 Click button cancel relevance
     click element when is enabled  ${web_PLATFORM_CUSTOMER_BUTTONCANCELRELEVANCE}
     sleep  2s
+
+#    取消关联设备按钮
+Click button cancel connect device
+    click element when is enabled  ${web_PLATFORM_CUSTOMER_BUTTONCANCELRELEVANCE_DEVICE}
+    sleep  2s
+
 
 #   验证客户界面对应客户信息是否追加成功
 Add customer success
@@ -111,3 +120,18 @@ Delete customerInfo
     Platform_CustomerPage.Click bottom button deleted
     Set deletde reason  3
     Click delete confirm button
+
+#    批量编辑供热状态
+Select customer heating state
+    [Arguments]  ${heatState}
+    select from list by index  ${web_PLATFORM_CUSTOMER_EDITSERVICESTATUS}  ${heatState}
+
+#    批量编辑供热状态的确认按钮
+Click customer heating state button
+    click element when is enabled  ${web_PLATFORM_CUSTOMER_SAVEEIDTSERVICESTATUS}
+    sleep  2s
+
+#   供热状态修改成功
+Edit customer heating state success
+    [Arguments]    ${text}    ${loglevel}=INFO
+    Page Should Contain    ${text}    ${loglevel}
