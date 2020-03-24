@@ -17,6 +17,7 @@ ${cus_customerMeterList}  jqg_connectMeterGrid_0
 ${cus_customerList_one}  jqg_customerGrid_0
 ${cus_customerList_two}  jqg_customerGrid_1
 ${cus_orgTreeId}  CustomerEditOrgTree_3_a
+${cus_customerGrid_number}  customerGrid_number
 
 *** Test Cases ***
 IP-6020: add cuatomer name is null
@@ -45,6 +46,8 @@ IP-6041: add customer heating is stop
 IP-6043: add customer
     Given User is in customer info page
     When Add customer
+    Then Edit customer success  @{cus_list}[0]
+    [Teardown]  Delete customer
 
 IP-6050: add customer and meter
     Given User is in customer info page
@@ -107,6 +110,10 @@ IP-6063:customer edit serviceStatus
     Given User is in customer info page
     When Customer edit serviceStatus
     Then Platform_CustomerPage.Edit customer heating state success  停热
+
+IP-2046: customer number filter
+    Given User is in customer info page
+    When Customer number filter
 
 *** Keywords ***
 User is in customer info page
@@ -285,4 +292,10 @@ Add customer and meter success
 Delete customer and meter
     Platform_CustomerPage.Click left ztree button  ${cus_leftTree}
     delete customer
+
+#    客户过滤
+Customer number filter
+    Platform_CustomerPage.Click left ztree button  ${cus_leftTree}
+    Platform_CustomerPage.Click on the header to sort  ${cus_customerGrid_number}
+    sleep  2s
 

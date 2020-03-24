@@ -135,3 +135,9 @@ Click customer heating state button
 Edit customer heating state success
     [Arguments]    ${text}    ${loglevel}=INFO
     Page Should Contain    ${text}    ${loglevel}
+
+#   客户信息过滤
+Click on the header to sort
+    [Arguments]  ${org_title}
+    click element  //th[contains(@id,"${org_title}")]
+    sleep  2s
