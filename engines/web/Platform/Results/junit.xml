@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Organization Info" tests="1" errors="0" failures="0" skip="0">
-<testcase classname="Organization Info" name="IP-xxx : Add organization" time="36">
+<testsuite name="Meter Info" tests="1" errors="0" failures="1" skip="0">
+<testcase classname="Meter Info" name="IP-6076: edit meterNumber" time="16">
+<failure message="ElementNotVisibleException: Message: element not interactable&#10;  (Session info: chrome=80.0.3987.149)&#10;  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.14393 x86_64)&#10;" type="AssertionError"></failure>
 </testcase>
 </testsuite>

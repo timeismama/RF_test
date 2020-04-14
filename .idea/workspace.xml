@@ -3,14 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="fc4ae98d-8d55-4b50-b356-99c92f54977e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_CustomerPage.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_CustomerPage.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_OrganizationPage.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_OrganizationPage.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engines/web/Platform/Resources/Platform_Common.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Resources/Platform_Common.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_Device.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Resources/PO/Platform_Device.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/web/Platform/Results/junit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Results/junit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/web/Platform/Results/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Results/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/web/Platform/Results/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Results/output.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/web/Platform/Results/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Results/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engines/web/Platform/Tests/Customer_Management/Organization_Info.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Tests/Customer_Management/Organization_Info.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/web/Platform/Tests/Device_Management/Meter_Info.robot" beforeDir="false" afterPath="$PROJECT_DIR$/engines/web/Platform/Tests/Device_Management/Meter_Info.robot" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,6 +17,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1PMHyv4ZrsW6A2rB5GEaOa0LqTs" />
