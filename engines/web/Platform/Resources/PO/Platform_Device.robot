@@ -1,11 +1,13 @@
-﻿*** Settings ***
-Resource  ../Platform_Common.robot
+﻿#-*- coding: utf-8 -*-
 
+*** Settings ***
+Resource  ../Platform_Common.robot
 
 *** Variables ***
 ${METER_PADER}  meterPager_left
-
+${METER_ENDPADER}  endMeasPager_left
 ${web_PLATFORM_METER_METERNUMBER}  id:meterNumber
+${web_PLATFORM_METER_REPEAT_METERNUMBER}  id:repeat_meterNumber
 ${web_PLATFORM_METER_ASSETNUMBER}  id:assetNumber
 ${web_PLATFORM_METER_USAGETYPE}  id:usageType
 ${web_PLATFORM_METER_SIZE}  id:size
@@ -25,11 +27,15 @@ ${web_PLATFORM_METER_CLOSETHISDIALOG}  id:closeThisDialog
 ${web_PLATFORM_METER_ORGNAME}  id:orgName
 ${web_PLATFORM_METER_TOCONNECTCONCENTRATOR}  id:toConnectConcentrator
 ${web_PLATFORM_METER_GUIDENEXT_BUTTON}  id:meter_guideNext_button
+${web_PLATFORM_METER_CHANGENEXT_BUTTON}  xpath://html/body/div[1]/div[21]/div/div[2]/div/div[3]/a[3]
 ${web_PLATFORM_METER_INSTALLTIME}  name:installTime
 ${web_PLATFORM_METER_ADDITINALFIELDNAME}  id:additinalFieldName
 ${web_PLATFORM_METER_ADDITINALFIELDVALUE}  id:additinalFieldValue
 ${web_PLATFORM_METER_IMG_ADDITINAL_ADD}  id:img_additinal_add
-
+${web_PLATFORM_METER_OPERATOR}  xpath://span[contains(text(),'换表人')]/../input
+${web_PLATFORM_METER_REASON}  xpath://span[contains(text(),'换表原因')]/../input
+${web_PLATFORM_METER_REMARK}  xpath://span[contains(text(),'备注')]/../input
+${web_PLATFORM_METER_CHANGEOVER_BUTTON}  xpath://html/body/div[1]/div[21]/div/div[2]/div/div[3]/a[2]
 
 *** Keywords ***
 #    添加按钮
@@ -80,6 +86,10 @@ Set meter_meternumber
     [Arguments]  ${meterNumber}
     input text  ${web_PLATFORM_METER_METERNUMBER}  ${meterNumber}
 
+#修改仪表编号
+Set meter_repeat_meternumber
+    [Arguments]  ${meterNumber}
+    input text  ${web_PLATFORM_METER_REPEAT_METERNUMBER}  ${meterNumber}
 #    仪表资产号
 Set meter_assetNumber
     [Arguments]  ${assetNumber}
@@ -155,12 +165,49 @@ Cleck meter_nextButton
 #    完成按钮
 Cleck meter_over
     click element when is enabled   ${web_PLATFORM_METER_GUIDEOVER_BUTTON}
+#    换表下一步
+Click changemeter_nextButton
+    click element when is enabled  ${web_PLATFORM_METER_CHANGENEXT_BUTTON}
 
+##  添加旧表的抄表数据
+#Click changemeter_add_old_Val
+#    click element when is enabled  ${web_PLATFORM_METER_CHANGENEXT_BUTTON}
+#    ${add_button_ele}     Get bottom button    ${METER_ENDPADER}  添加
+#    click element when is enabled   ${add_button_ele}
+#    sleep  2s
+#    Click button_confirm
+
+Set old_Val
+    [Arguments]  ${additinalFieldName}  ${additinalFieldValue}
+    input text  ${web_PLATFORM_METER_ADDITINALFIELDNAME}  ${additinalFieldName}
+    input text  ${web_PLATFORM_METER_ADDITINALFIELDVALUE}  ${additinalFieldValue}
+    click image  ${web_PLATFORM_METER_IMG_ADDITINAL_ADD}
+
+# 根据名称关键字选中列表中的数据
+Click list by value
+    [Arguments]  ${web_PLATFORM_METER_LIST_PATH}  ${value}
+    select list by value  ${web_PLATFORM_METER_LIST_PATH}  ${value}
+
+#    换表完成按钮
+Click changemeter_over
+    click element when is enabled  ${web_PLATFORM_METER_CHANGEOVER_BUTTON}
 #    编辑仪表编号
 Click meter_meterNumberEdit
     click element when is enabled  ${web_PLATFORM_METER_DETAILEDIT}
     click element when is enabled  ${web_PLATFORM_METER_CONTINUECCHANGE}
-    sleep  2s
+
+#    编辑仪表编号--去換表
+Click meter_meterReplace
+    click element when is enabled  ${web_PLATFORM_METER_DETAILEDIT}
+    click element when is enabled  ${web_PLATFORM_METER_EDITMETERNUMBER}
+
+#  设置换表人、换表原因、备注
+SET changemeter_ITEM
+    [Arguments]  ${change_operator}  ${change_reason}  ${change_remark}
+    input text  ${web_PLATFORM_METER_OPERATOR}  ${change_operator}
+    input text  ${web_PLATFORM_METER_REASON}  ${change_reason}
+    input text  ${web_PLATFORM_METER_REASON}  ${change_remark}
+
 
 #   去换表按钮
 Click meter bottom button replaceMeter
