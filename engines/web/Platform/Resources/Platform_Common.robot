@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 *** Settings ***
 Resource    ../PlatformShare.robot
 
@@ -44,6 +45,17 @@ ${web_PLATFORM_REPLACEMETER_GUIDEOVER}  id:replaceGuideOver
 #   温馨提示
 ${web_PLATFORM_WARM_DELDIALOG_CONFIRM}  id:delDialog_confirm
 
+#操作完成后的弹窗提示信息
+${web_PLATFORM_INFOMSG}  xpath://*[@id="infoMsg"]
+
+#警告弹窗信息
+${web_PLATFORM_WARNMSG}  id:warnMsg
+
+#下一页按钮
+${web_PLATFORM_NEXT_PAGE}  xpath://span[@ng-click='next(nowPage)']
+
+#列表
+${web_PLATFORM_METER_LIST}  xpath:td[@title[])
 *** Keywords ***
 wait for loading page
     [Documentation]    Wait for dissapearing all loading page icons
@@ -59,6 +71,13 @@ Select unGroup left tree button
 Get bottom button
     [Arguments]     ${td_id}  ${button_title}
     [Return]    //td[@id="${td_id}"]/table/tbody/tr/td[@title="${button_title}"]
+
+#   根据名称关键字选中列表中的数据
+select list by value
+    [Arguments]     ${table_id}  ${td_title}
+    click element when is enabled   //table[@id="${table_id}"]/tbody/tr/td/span[contains(text(),'${td_title}')]
+
+
 
 #     客户添加向导第一步
 #   客户编号
@@ -206,6 +225,20 @@ Click meterReplace_over
 Click warm delDialog_confirm
     click element when is enabled  ${web_PLATFORM_WARM_DELDIALOG_CONFIRM}
     sleep  2s
+
+#操作完成后的弹窗信息
+Get Info_msg
+    ${info}  get_text  ${web_PLATFORM_INFOMSG}
+    [Return]  ${info}
+    #log  to console  ${info}
+
+#警告弹窗信息
+Get warn_msg
+    ${warn}  get_text  ${web_PLATFORM_WARNMSG}
+    [Return]  ${warn}
+
+
+
 
 
 
