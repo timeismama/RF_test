@@ -36,6 +36,8 @@ ${web_PLATFORM_METER_OPERATOR}  xpath://span[contains(text(),'换表人')]/../in
 ${web_PLATFORM_METER_REASON}  xpath://span[contains(text(),'换表原因')]/../input
 ${web_PLATFORM_METER_REMARK}  xpath://span[contains(text(),'备注')]/../input
 ${web_PLATFORM_METER_CHANGEOVER_BUTTON}  xpath://html/body/div[1]/div[21]/div/div[2]/div/div[3]/a[2]
+${web_PLATFORM_METER_RELATIVE_CONFIRMBUTTON}  xpath://a[@ng-click='toConnectConcentrator()']
+${web_PLATFORM_METER_CANCEL_RELATIVE_CONFIRMBUTTON}  xpath://a[@ng-click='confirm()']
 
 *** Keywords ***
 #    添加按钮
@@ -79,6 +81,11 @@ Click bottom button cancelTheAssociationConcentrator
     ${add_button_ele}     Get bottom button    ${METER_PADER}  取消关联M-Bus集中器
     click element when is enabled   ${add_button_ele}
     sleep  2s
+
+#    取消关联M-BUS集中器 确定按钮
+Click bottom button cancelTheAssociationConcentratorConfirm
+    click element when is enabled   ${web_PLATFORM_METER_CANCEL_RELATIVE_CONFIRMBUTTON}
+
 
 #    向导第一步
 #仪表编号
@@ -230,9 +237,8 @@ Set meter_info
 
 #   关联集中器完成按钮
 Click meter button connect_concentrator
-    click element when is enabled  ${web_PLATFORM_METER_TOCONNECTCONCENTRATOR}
+    click element when is enabled  ${web_PLATFORM_METER_RELATIVE_CONFIRMBUTTON}
     sleep  2s
-
 #    编辑仪表成功
 Add meter success
     [Arguments]    ${text}    ${loglevel}=INFO

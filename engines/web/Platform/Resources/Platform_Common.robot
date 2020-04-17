@@ -75,7 +75,7 @@ Get bottom button
 #   根据名称关键字选中列表中的数据
 select list by value
     [Arguments]     ${table_id}  ${td_title}
-    click element when is enabled   //table[@id="${table_id}"]/tbody/tr/td/span[contains(text(),'${td_title}')]
+    click element when is enabled   //table[@id="${table_id}"]/tbody/tr/td[starts-with(@title,'${td_title}')]
 
 
 
