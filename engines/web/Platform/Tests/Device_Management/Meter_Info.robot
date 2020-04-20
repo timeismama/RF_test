@@ -25,6 +25,7 @@ ${web_PLATFORM_METER_OLD_VAL}  endMeasGrid
 ${web_PLATFORM_METER_NEW_NUMBER}  newmeterGrid
 ${web_PLATFORM_METER_START_VAL}  startMeasGrid
 ${web_PLATFORM_METER_CONCENTRATOR}  connectConcentratorGrid
+
 *** Test Cases ***
 IP-6069: add meter number empty
     Given User in meter management page
@@ -136,18 +137,6 @@ IP-6087: edit meter Cancel_M-Bus unsel number
     When Meter Cancel_relative M-Bus sel number
     ${info}  Platform_Common.Get info_msg
     Then should be equal as strings  ${info}  ${meter_Cancel_relative M-Bus_success}
-
-tin-04 deltedAll meter
-    Then deltedAll meter
-
-tin-05 replace meter
-    Then replace meter
-
-tin-06 correlation concentrator
-    Then correlation concentrator
-
-tin-07 cancel the association concentrator
-    Then cancel the association concentrator
 
 *** Keywords ***
 User in meter management page
