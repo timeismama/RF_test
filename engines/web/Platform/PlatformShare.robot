@@ -19,6 +19,7 @@ Resource          Resources/PO/Platform_LoginPage.robot
 Resource          Resources/PO/Platform_OrganizationPage.robot
 Resource          Resources/PO/Platform_CustomerPage.robot
 Resource          Resources/PO/Platform_Device.robot
+Resource          Resources/PO/Platform_Humiture.robot
 
 
 *** Keywords ***
