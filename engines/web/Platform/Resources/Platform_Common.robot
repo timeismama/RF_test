@@ -226,19 +226,6 @@ Click warm delDialog_confirm
     click element when is enabled  ${web_PLATFORM_WARM_DELDIALOG_CONFIRM}
     sleep  2s
 
-#操作完成后的弹窗信息
-Get Info_msg
-    ${info}  get_text  ${web_PLATFORM_INFOMSG}
-    [Return]  ${info}
-    #log  to console  ${info}
-
-#警告弹窗信息
-Get warn_msg
-    ${warn}  get_text  ${web_PLATFORM_WARNMSG}
-    [Return]  ${warn}
-
-
-
 
 
 
