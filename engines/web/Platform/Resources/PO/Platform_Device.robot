@@ -38,7 +38,8 @@ ${web_PLATFORM_METER_REMARK}  xpath://span[contains(text(),'备注')]/../input
 ${web_PLATFORM_METER_CHANGEOVER_BUTTON}  xpath://html/body/div[1]/div[21]/div/div[2]/div/div[3]/a[2]
 ${web_PLATFORM_METER_RELATIVE_CONFIRMBUTTON}  xpath://a[@ng-click='toConnectConcentrator()']
 ${web_PLATFORM_METER_CANCEL_RELATIVE_CONFIRMBUTTON}  xpath://a[@ng-click='confirm()']
-
+${web_PLATFORM_HUMITURE_EXIST_NUMBER}  xpath://td[@aria-describedby='meterGrid_meterNumber']
+${web_PLATFORM_METER_COUNT}  xpath://*[@id="table"]/div[3]/table/tbody/tr/td[4]/span[2]
 *** Keywords ***
 #    添加按钮
 Click bottom button add
@@ -247,3 +248,18 @@ Add meter success
 #    获取table页中的某行
 Select table one row
     click element  //table[@id='connectConcentratorGrid']
+
+#   判断信息不存在
+Assess meter not_contain
+    [Arguments]    ${text}    ${loglevel}=INFO
+    Page Should Not Contain    ${text}    ${loglevel}
+
+#    获取列表的第一条温湿器编号
+Get exist_meter_number
+    ${exist_number}  get text  ${web_PLATFORM_HUMITURE_EXIST_NUMBER}
+    [Return]  ${exist_number}
+
+#   获取列表仪表数量
+Get meter Count
+    ${count}  get text  ${web_PLATFORM_METER_COUNT}
+    [Return]  ${count}
