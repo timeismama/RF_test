@@ -11,7 +11,10 @@ ${index}   30
 ${ROW_ID}  jqg_meterGrid_0
 ${meter_noGroup}  未分组
 ${meter_waterNumber}  W001
+${meter_new_waterNumber}  W001
 ${meter_gasNumber}  G001
+${concentrator_num}  M001
+${exist_number}  001
 ${meter_number_empty}  *仪表编号不能为空
 ${meter_number_exist}  *仪表编号已存在
 ${meter_changeinfo}   换表记录添加成功！
@@ -71,9 +74,9 @@ IP-6174: add meter additinal field
 #仪表编号不可重复
 IP-6075: edit exist meterNumber
     Given User in meter management page
-    When Edit exist meterNumber
+    sleep  1s
+    When Edit exist meterNumber  ${exist_number}
     Then Add meter success  ${meter_number_exist}
-
 
 #编辑仪表编号
 IP-6076: edit meterNumber
@@ -85,58 +88,84 @@ IP-6076: edit meterNumber
 IP-6077: change meter
     Given User in meter management page
     When Change meter
-    ${info}  Platform_Common.Get Info_msg
-    Then should be equal as strings  ${info}  ${meter_changeinfo}
+    Then Add meter success  ${meter_changeinfo}
 
 # 编辑仪表经纬度等其他信息
 IP-6078: edit meterother
     Given User in meter management page
     When Edit meterother
-    ${info}  Platform_Common.Get Info_msg
-    Then should_contain  ${info}  ${meter_editinfo}
+    ${exist_num}  Get exist_meter_number
+    Then Add meter success  ${exist_num}${meter_editinfo}
 
 #  更换仪表--未选择仪表
 IP-6082: change meter number empty
     Given User in meter management page
     sleep  1s
     When Edit meter unsel number
-    ${warn}  Platform_Common.Get warn_msg
-    Then should be equal as strings  ${warn}  ${meter_change_failed}
+    Then Add meter success  ${meter_change_failed}
 
 #  更换仪表--选择新表记录更换
 IP-6083: change meter sel newmeter
     Given User in meter management page
     When Change meter sel newmeter
-    ${info}  Platform_Common.Get Info_msg
-    Then should be equal as strings  ${info}  ${meter_changeinfo}
+    Then Add meter success   ${meter_changeinfo}
 
 #  关联M-Bus集中器按钮--未选择仪表
 IP-6084: meter relative M-Bus unsel number
     Given User in meter management page
     When Meter relative M-Bus unsel number
-    ${warn}  Platform_Common.Get warn_msg
-    Then should be equal as strings  ${warn}  ${meter relative M-Bus_failed}
+    Then Add meter success  ${meter relative M-Bus_failed}
 
 #  关联M-Bus集中器
 IP-6085: meter relative M-Bus sel number
     Given User in meter management page
     When Meter relative M-Bus sel number
-    ${info}  Platform_Common.Get info_msg
-    Then should_contain  ${info}  ${meter relative M-Bus_success}
+    Then Add meter success  ${meter relative M-Bus_success}
 
 #  取消关联M-Bus集中器按钮--未选择仪表
 IP-6086: edit meter Cancel_M-Bus unsel number
     Given User in meter management page
     When Meter Cancel_relative M-Bus unsel number
-    ${warn}  Platform_Common.Get warn_msg
-    Then should be equal as strings  ${warn}  ${meter_Cancel_relative M-Bus_failed}
+    Then Add meter success  ${meter_Cancel_relative M-Bus_failed}
 
 #  取消关联M-Bus集中器
-IP-6087: edit meter Cancel_M-Bus unsel number
+IP-6087: edit meter Cancel_M-Bus sel number
     Given User in meter management page
     When Meter Cancel_relative M-Bus sel number
-    ${info}  Platform_Common.Get info_msg
-    Then should be equal as strings  ${info}  ${meter_Cancel_relative M-Bus_success}
+    Then Add meter success  ${meter_Cancel_relative M-Bus_success}
+
+##   单个删除温湿器
+IP-6095: delete meter_one
+    Given User in meter management page
+    sleep  2s
+    When Select unGroup left tree button  ${meter_noGroup}
+    ${exist_number1}  Platform_Device.Get exist_meter_number
+    And delete meter
+    ${exist_number2}  Platform_Device.Get exist_meter_number
+    Then should not be equal as strings  ${exist_number1}  ${exist_number2}
+
+#   删除全部温湿器
+IP-6096: delete meter_all
+    ${random}  evaluate  random.randint(1,9999)  random
+    Given User in meter management page
+    sleep  1s
+    When Select unGroup left tree button  ${meter_noGroup}
+    And deltedAll meter
+    ${count}  Get meter Count
+    Then should be equal as strings  ${count}  0
+
+
+tin-04 deltedAll meter
+    Then deltedAll meter
+
+tin-05 replace meter
+    Then replace meter
+
+tin-06 correlation concentrator
+    Then correlation concentrator
+
+tin-07 cancel the association concentrator
+    Then cancel the association concentrator
 
 *** Keywords ***
 User in meter management page
@@ -220,9 +249,10 @@ Add meter additinal field
     sleep  2s
 
 Edit exist meterNumber
+    [Arguments]  ${exist_num}
     Select unGroup left tree button  ${meter_noGroup}
     Platform_Device.Click bottom button add
-    Platform_Device.Set meter_meternumber  001
+    Platform_Device.Set meter_meternumber  ${exist_num}
     Platform_Device.Cleck meter_nextButton
 
 Edit meterNumber
@@ -230,7 +260,7 @@ Edit meterNumber
     Select list one row  ${ROW_ID}
     Platform_Device.Click bottom button edit
     Platform_Device.Click meter_meterNumberEdit
-    Platform_Device.Set meter_repeat_meternumber  ${meter_waterNumber}
+    Platform_Device.Set meter_repeat_meternumber  edit001
     Platform_Device.Cleck meter_nextButton
     Platform_Device.Cleck meter_nextButton
     Platform_Device.Cleck meter_over
@@ -246,7 +276,7 @@ Change meter
     Platform_Device.Click meter_meterReplace
     Platform_Device.Click list by value  ${web_PLATFORM_METER_OLD_VAL}  2020-02-14
     Platform_Device.Click changemeter_nextButton    #换表下一步
-    Platform_Device.Click list by value  ${web_PLATFORM_METER_NEW_NUMBER}  W001
+    Platform_Device.Click list by value  ${web_PLATFORM_METER_NEW_NUMBER}  ${meter_waterNumber}
     Platform_Device.Click changemeter_nextButton    #换表下一步
     Platform_Device.Click list by value  ${web_PLATFORM_METER_START_VAL}  2020-02-28
     Platform_Device.Click changemeter_nextButton  #下一步
@@ -282,7 +312,7 @@ Change meter sel newmeter
     Platform_Device.Click bottom button replaceMeter  #更换仪表
     Platform_Device.Click list by value  ${web_PLATFORM_METER_OLD_VAL}  2020-02-14
     Platform_Device.Click changemeter_nextButton    #换表下一步
-    Platform_Device.Click list by value  ${web_PLATFORM_METER_NEW_NUMBER}  W001
+    Platform_Device.Click list by value  ${web_PLATFORM_METER_NEW_NUMBER}  ${meter_new_waterNumber}
     Platform_Device.Click changemeter_nextButton    #换表下一步
     Platform_Device.Click list by value  ${web_PLATFORM_METER_START_VAL}  2020-02-28
     Platform_Device.Click changemeter_nextButton    #换表下一步
@@ -302,7 +332,7 @@ Meter relative M-Bus sel number
     sleep  1s
     Select list one row  ${ROW_ID}
     Platform_Device.Click bottom button correlationConcentrator
-    Platform_Device.Click list by value  ${web_PLATFORM_METER_CONCENTRATOR}  M001
+    Platform_Device.Click list by value  ${web_PLATFORM_METER_CONCENTRATOR}  ${concentrator_num}
     Platform_Device.Click meter button connect_concentrator
 
 #未选择仪表，点击取消关联M-Bus集中器按钮
