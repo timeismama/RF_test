@@ -1,4 +1,4 @@
-﻿#-*- coding: utf-8 -*-
+﻿﻿#-*- coding: utf-8 -*-
 #coding: utf-8
 
 *** Settings ***
@@ -27,7 +27,7 @@ Start Platform with default user account
     [Documentation]    Open and maximize browser with selected url
     ${chrome options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
     ${chrome noProxy}=    Evaluate    selenium.webdriver.Proxy({'proxyType':selenium.webdriver.common.proxy.ProxyType.DIRECT})    modules=sys, selenium
-    Call Method    ${chrome options}    add_argument    --lang\=en-US
+    Call Method    ${chrome options}    add_argument    --lang\=zh-CN
     Call Method    ${chrome options}    add_argument    --disable-single-click-autofill
     ${chrome options}    Call Method    ${chrome options}    to_capabilities
     Call Method    ${chrome noProxy}    add_to_capabilities    ${chrome options}
