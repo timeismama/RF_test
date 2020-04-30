@@ -16,3 +16,6 @@ Get into meter page
 
 Get into customer page
     Click or use url  customer
+
+Get into humiture page
+    Click or use url  humiture
