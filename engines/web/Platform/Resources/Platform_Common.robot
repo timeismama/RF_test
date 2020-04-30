@@ -207,6 +207,16 @@ Click warm delDialog_confirm
     click element when is enabled  ${web_PLATFORM_WARM_DELDIALOG_CONFIRM}
     sleep  2s
 
+#  根据组织名称展开左侧组织树
+Select left tree by orgname
+    [Arguments]  ${orgName}
+    click element when is enabled    //span[contains(text(),"${orgName}")]/../../span
+
+# 温湿器相关
+Click common button
+    [Arguments]     ${td_id}  ${button_title}
+    click element when is enabled    //td[@id="${td_id}"]/table/tbody/tr/td[@title="${button_title}"]
+
 
 
 
